@@ -408,26 +408,6 @@ findPoints() {
       this.points = points;
       console.log(this.points);
     },
-
-original -
-.title {
-  position: absolute;
-  top: 41%;
-  right: 20%;
-  font-size: 2rem;
-  color: whitesmoke;
-}
-
-.subtitle {
-  position: absolute;
-  top: 49%;
-  right: 15%;
-  font-size: 1.5rem;
-  background: #3c3b3f;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
   */
 </style>
 

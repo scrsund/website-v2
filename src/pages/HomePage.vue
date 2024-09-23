@@ -50,25 +50,32 @@
           </div>
         </div>
       </div>
+      <div class="arrow-container">
+        <span class="arrow"></span>
+        <span class="arrow"></span>
+      </div>
     </section>
     <!-- ARROW ANIMATION-->
     <!-- PORTFOLIO PROJECTS-->
      <section class="portfolio-content">
       <h1>Projects I've worked on:</h1>
-      <div class="project">
-        <h2>Website v1</h2>
+      <div class="project-container">
+        <div class="project">
+          <h2>Website v1</h2>
+          <p></p>
+        </div>
+        <div class="project">
+          <h2>Recipe App</h2>
+        </div>
+        <div class="project">
+          <h2>Turtle Cross</h2>
+        </div>
+        <div class="project">
+          <h2>Trading Journal</h2>
+        </div>
       </div>
-      <div class="project">
-        <h2>Recipe App</h2>
-      </div>
-      <div class="project">
-        <h2>Turtle Cross</h2>
-      </div>
-      <div class="project">
-        <h2>Trading Journal</h2>
-      </div>
-      <hr>
     </section>
+    <hr>
     <section class="contact">
       <h1>Get in touch!</h1>
       <p>Email me at scr.sund@gmail.com</p>
@@ -78,22 +85,11 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-// import AboutPage from '@/pages/AboutPage.vue';
 import HoverCardAnimation from '../components/HoverCardAnimation.vue';
 
 export default {
   components: {
-    // AboutPage,
     HoverCardAnimation,
-  },
-  computed: {
-    ...mapState(["iconList"]),
-  },
-  methods: {
-    getIconClass(index) {
-      return `icon-position-${index} ${this.iconState}`;
-    },
   },
 };
 </script>
@@ -106,14 +102,14 @@ main {
 
 .container {
   width: 100%;
-  min-height: 74vh; /* Changed from height: 100vh */
+  min-height: 74vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Changed from center */
+  align-items: flex-start;
   position: relative;
   z-index: 0;
-  margin-top: 2rem; /* Added to give some space below the header */
-  padding-top: 2rem; /* Added to push content down a bit */
+  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 .box {
@@ -208,6 +204,61 @@ i {
   color: #6a6666;
 }
 
+/*ARROW STYLING*/
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  width: 5px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 3px;
+  animation: move 1.1s ease-in-out;
+}
+
+.arrow:nth-of-type(1){
+  transform: rotate(-45deg);
+}
+
+.arrow:nth-of-type(2){
+  transform: rotate(45deg);
+}
+
+@keyframes move{
+  0%{margin-top: 0;}
+  50%{margin-top: 50px;}
+  100%{margin-top: 0;}
+}
+
+/*PROJECT DISPLAY*/
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-content h1 {
+  font-size: 1.8rem;
+
+}
+
+.portfolio-content h2 {
+  font-size: 1.5rem;
+}
+
+.project-content {
+}
+
+
+
+
+/*RESPONSIVE DESIGN*/
+
 @media (max-width: 1000px) {
   .container {
     display: grid;
@@ -266,58 +317,4 @@ i {
     font-size: 28px;
   }
 }
-
-/*
-CIRCLE CALCULATION
-
-center (450%, -700%)
-
-findPoints() {
-      const C_x = 450; // Center x-coordinate in percentage
-      const C_y = -700; // Center y-coordinate in percentage
-      const Point1 = { x: -250, y: -700 }; // Given point1
-      const n = 5; // Total number of points
-
-      // Calculate the radius of the circle
-      const r = Math.abs(C_x - Point1.x); // Since Point1 and Point2 lie on the same horizontal line
-
-      // Calculate the angles for the given points
-      const angle1 = Math.atan2(Point1.y - C_y, Point1.x - C_x);
-
-      // Calculate the angular step between each point
-      const step = (2 * Math.PI) / n;
-
-      const points = [];
-
-      for (let i = 0; i < n; i++) {
-        const angle = angle1 + i * step;
-        const x = C_x + r * Math.cos(angle);
-        const y = C_y + r * Math.sin(angle);
-        points.push({ x, y });
-      }
-
-      this.points = points;
-      console.log(this.points);
-    },
-
-original -
-.title {
-  position: absolute;
-  top: 41%;
-  right: 20%;
-  font-size: 2rem;
-  color: whitesmoke;
-}
-
-.subtitle {
-  position: absolute;
-  top: 49%;
-  right: 15%;
-  font-size: 1.5rem;
-  background: #3c3b3f;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-  */
 </style>
