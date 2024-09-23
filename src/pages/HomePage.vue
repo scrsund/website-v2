@@ -2,44 +2,57 @@
   <main>
     <section class="container">
       <div class="box">
-        <HoverCardAnimation></HoverCardAnimation>
-        <!-- <hover-card>
-          <hover-card-trigger>
-            <home-card>
-              <router-link to="/about">Hi, I'm Sarah 👋</router-link>
-            </home-card>
-          </hover-card-trigger>
-          <hover-card-content>
-            <div class="icon-container">
-              <i
-                class="fa-solid fa-music"
-                :class="['hidden-load', getIconClass(1)]"
-              ></i>
-              <i
-                class="fa-solid fa-graduation-cap"
-                :class="getIconClass(2)"
-              ></i>
-              <i class="fa-solid fa-dumbbell" :class="getIconClass(3)"></i>
-              <i class="fa-solid fa-trophy" :class="getIconClass(4)"></i>
-              <i class="fa-solid fa-people-group" :class="getIconClass(5)"></i>
-              <i class="fa-solid fa-code" :class="getIconClass(6)"></i>
-              <i class="fa-solid fa-drum" :class="getIconClass(7)"></i>
-            </div>
-          </hover-card-content>
-        </hover-card> -->
+        <HoverCardAnimation />
       </div>
       <!-- BIO -->
       <div class="text-container">
-        <h2 class="title">Becoming a <span>FrontEnd Developer</span></h2>
-        <div class="icon-list">
-          <i class="fa-brands fa-js"></i>
-          <i class="fa-brands fa-python"></i>
+        <h2 class="title">I'm a <span>FrontEnd Developer</span> with a passion for learning new skills.</h2>
+        <div class="tech-stack">
+
+          <h2 class="subheading">The tech stack I'm familiar with:</h2>
+          <div class="icon-list">
+            <div class="icon-title">
+              <i class="fa-brands fa-html5"></i>
+              <h3>HTML</h3>
+            </div>
+            <div class="icon-title">
+              <i class="fa-brands fa-css3-alt"></i>
+              <h3>CSS</h3>
+            </div>
+            <div class="icon-title">
+              <i class="fa-brands fa-js"></i>
+              <h3>JavaScript</h3>
+            </div>
+            <div class="icon-title">
+              <i class="fa-brands fa-vuejs"></i>
+              <h3>Vue.js</h3>
+            </div>
+            <div class="icon-title">
+              <i class="fa-brands fa-node-js"></i>
+              <h3>Express.js</h3>
+            </div>
+            <div class="icon-title">
+              <i class="fa-brands fa-python"></i>
+              <h3>Python</h3>
+            </div>
+            <div class="icon-title">
+              <i class="fa-solid fa-database"></i>
+              <h3>SQL</h3>
+            </div>
+            <div class="icon-title">
+              <i class="fa-brands fa-git"></i>
+              <h3>Git</h3>
+            </div>
+            <div class="icon-title">
+              <i class="fa-brands fa-figma"></i>
+              <h3>Figma</h3>
+            </div>
+          </div>
         </div>
-        <!-- <h2 class="subtitle">Vue.js · postgreSQL · Python</h2> -->
       </div>
     </section>
+    <!-- ARROW ANIMATION-->
     <!-- PORTFOLIO PROJECTS-->
-    <!-- <AboutPage /> -->
      <section class="portfolio-content">
       <h1>Projects I've worked on:</h1>
       <div class="project">
@@ -65,22 +78,12 @@
 </template>
 
 <script>
-// import HomeCard from "../components/UI/HomeCard.vue";
-// import {
-//   HoverCard,
-//   HoverCardContent,
-//   HoverCardTrigger,
-// } from "@/components/UI/hover-card";
 import { mapState } from "vuex";
 // import AboutPage from '@/pages/AboutPage.vue';
 import HoverCardAnimation from '../components/HoverCardAnimation.vue';
 
 export default {
   components: {
-    // HomeCard,
-    // HoverCard,
-    // HoverCardContent,
-    // HoverCardTrigger,
     // AboutPage,
     HoverCardAnimation,
   },
@@ -96,254 +99,6 @@ export default {
 </script>
 
 <style scoped>
-
-span {
-  color: var(--clr-4);
-}
-@keyframes slideOut1 {
-  0% {
-    opacity: 0;
-    transform: translate(-630%, -50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-1000%, 630%);
-  }
-}
-
-@keyframes slideIn1 {
-  0% {
-    opacity: 1;
-    transform: translate(-1000%, 630%);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-630%, -50%);
-  }
-}
-
-@keyframes slideOut2 {
-  0% {
-    opacity: 0;
-    transform: translate(-630%, -50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-1080%, 100%);
-  }
-}
-
-@keyframes slideIn2 {
-  0% {
-    opacity: 1;
-    transform: translate(-1080%, 100%);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-630%, -50%);
-  }
-}
-
-@keyframes slideOut3 {
-  0% {
-    opacity: 0;
-    transform: translate(-630%, -50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-1040%, -500%);
-  }
-}
-
-@keyframes slideIn3 {
-  0% {
-    opacity: 1;
-    transform: translate(-1040%, -500%);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-630%, -50%);
-  }
-}
-
-@keyframes slideOut4 {
-  0% {
-    opacity: 0;
-    transform: translate(-630%, -50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-570%, -750%);
-  }
-}
-
-@keyframes slideIn4 {
-  0% {
-    opacity: 1;
-    transform: translate(-570%, -750%);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-630%, -50%);
-  }
-}
-
-@keyframes slideOut5 {
-  0% {
-    opacity: 0;
-    transform: translate(-500%, -50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-0%, -530%);
-  }
-}
-
-@keyframes slideIn5 {
-  0% {
-    opacity: 1;
-    transform: translate(-0%, -530%);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-500%, -50%);
-  }
-}
-
-@keyframes slideOut6 {
-  0% {
-    opacity: 0;
-    transform: translate(-500%, -50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(70%, 60%);
-  }
-}
-
-@keyframes slideIn6 {
-  0% {
-    opacity: 1;
-    transform: translate(70%, 60%);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-500%, -50%);
-  }
-}
-
-@keyframes slideOut7 {
-  0% {
-    opacity: 0;
-    transform: translate(-630%, -50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-250%, 610%);
-  }
-}
-
-@keyframes slideIn7 {
-  0% {
-    opacity: 1;
-    transform: translate(-250%, 610%);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-630%, -50%);
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-.icon-container {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.box:hover .icon-container {
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
-}
-
-.box:not(:hover) .icon-container {
-  animation: fadeOut 1s forwards;
-}
-
-i {
-  position: absolute;
-  font-size: 28px;
-  color: rgba(245, 245, 245, 0.618);
-  opacity: 0;
-  transition: all 0.4s ease;
-}
-
-.box:hover .icon-position-1 {
-  animation: slideOut1 1.8s ease forwards;
-}
-
-.box:hover .icon-position-2 {
-  animation: slideOut2 1.8s ease forwards;
-}
-
-.box:hover .icon-position-3 {
-  animation: slideOut3 1.8s ease forwards;
-}
-
-.box:hover .icon-position-4 {
-  animation: slideOut4 1.8s ease forwards;
-}
-
-.box:hover .icon-position-5 {
-  animation: slideOut5 1.8s ease forwards;
-}
-
-.box:hover .icon-position-6 {
-  animation: slideOut6 1.8s ease forwards;
-}
-
-.box:hover .icon-position-7 {
-  animation: slideOut7 1.8s ease forwards;
-}
-
-.box .icon-position-1 {
-  animation: slideIn1 1s ease forwards;
-}
-
-.box .icon-position-2 {
-  animation: slideIn2 1s ease forwards;
-}
-
-.box .icon-position-3 {
-  animation: slideIn3 1s ease forwards;
-}
-
-.box .icon-position-4 {
-  animation: slideIn4 1s ease forwards;
-}
-
-.box .icon-position-5 {
-  animation: slideIn5 1s ease forwards;
-}
-
-.box .icon-position-6 {
-  animation: slideIn6 1s ease forwards;
-}
-
-.box .icon-position-7 {
-  animation: slideIn7 1s ease forwards;
-}
-
 main {
   min-height: 74vh;
   padding: 2rem;
@@ -379,16 +134,31 @@ main {
 }
 
 .text-container {
-  margin-top: 4rem;
+  margin-top: 3rem;
   width: 25rem;
   margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title span {
+  color: var(--clr-4);
+}
+
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
 }
 
 .title {
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: whitesmoke;
-  text-align: left;
+  text-align: center;
 }
 
 .subtitle {
@@ -399,6 +169,43 @@ main {
   color: transparent;
   position: relative;
   text-align: right;
+}
+
+.subheading {
+  font-size: 1rem;
+}
+
+
+/*ICON DISPLAY*/
+
+i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+
+.icon-list {
+  display: flex;
+  gap: .5rem;
+}
+
+.icon-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-title i {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+  color: #6a6666;
+}
+
+.icon-title h3 {
+  margin: 0;
+  font-size: .6rem;
+  color: #6a6666;
 }
 
 @media (max-width: 1000px) {

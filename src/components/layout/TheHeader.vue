@@ -1,6 +1,6 @@
 <template>
   <header>
-    <router-link link to="/home" class="logo">sund.co</router-link>
+    <router-link link to="/home" class="logo">sarahsund</router-link>
     <div class="right-menu">
       <!-- <router-link to="/home">Home</router-link>
       <router-link to="/about">About</router-link> -->

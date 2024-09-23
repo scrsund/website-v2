@@ -216,6 +216,7 @@ export default {
   }
 }
 
+/*important*/
 .icon-container {
   position: absolute;
   opacity: 0;
@@ -298,18 +299,6 @@ i {
 }
 
 
-.container {
-  width: 100%;
-  min-height: 74vh; /* Changed from height: 100vh */
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Changed from center */
-  position: relative;
-  z-index: 0;
-  margin-top: 2rem; /* Added to give some space below the header */
-  padding-top: 2rem; /* Added to push content down a bit */
-}
-
 .box {
   position: relative;
   display: flex;
@@ -327,28 +316,6 @@ i {
   font-family: "Raleway", sans-serif;
 }
 
-.text-container {
-  margin-top: 4rem;
-  width: 25rem;
-  margin-left: 5rem;
-}
-
-.title {
-  position: relative;
-  font-size: 1.5rem;
-  color: whitesmoke;
-  text-align: left;
-}
-
-.subtitle {
-  font-size: 1.5rem;
-  background: #3c3b3f;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  position: relative;
-  text-align: right;
-}
 
 @media (max-width: 1000px) {
   .container {
