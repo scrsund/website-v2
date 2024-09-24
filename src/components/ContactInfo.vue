@@ -28,7 +28,7 @@
 }
 
 .contents{
-  width: 40%;
+  width: 35%;
   font-family: 'Poppins', sans-serif;
   font-size: .9rem;
 }
