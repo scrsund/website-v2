@@ -1,5 +1,5 @@
 <template>
-  <div class="text-container">
+  <section class="text-container">
     <h2 class="title">I'm a <span>Frontend Developer</span> with a passion for learning new skills.</h2>
     <div class="tech-stack">
       <h2 class="subheading">The tech stack I'm familiar with:</h2>
@@ -42,7 +42,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 
