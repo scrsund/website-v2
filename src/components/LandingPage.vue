@@ -76,16 +76,6 @@
   text-align: center;
 }
 
-.subtitle {
-  font-size: 1.5rem;
-  background: #3c3b3f;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  position: relative;
-  text-align: right;
-}
-
 .subheading {
   font-size: 1rem;
 }
@@ -114,13 +104,13 @@ i {
 .icon-title i {
   font-size: 2rem;
   margin-bottom: .5rem;
-  color: #6a6666;
+  color: var(--clr-7);
 }
 
 .icon-title h3 {
   margin: 0;
   font-size: .6rem;
-  color: #6a6666;
+  color: var(--clr-7);
 }
 
 </style>

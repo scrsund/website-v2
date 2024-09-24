@@ -4,14 +4,14 @@
       <h1>My Projects</h1>
     </div>
     <div class="project-wrapper">
-      <div class="project" v-for="(project) in projects" :key="project.title">
+      <div class="project-card" v-for="(project) in projects" :key="project.title">
         <div class="project-header">
           <h2>{{project.title}}</h2>
-          <div class="icon-heading">
+          <div class="icon-list">
             <i v-for="icon in getProjectIcons(project)" :key="icon" :class="icon"></i>
           </div>
         </div>
-        <p>{{project.description}}</p>
+        <p v-html="project.description" class="description"></p>
         <div class="link">
           <a :href="project.demoLink" target="_blank" rel="noopener noreferrer">Live Demo</a>
           <a :href="project.gitHubLink" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -33,14 +33,14 @@ export default {
 </script>
 
 <style scoped>
-/*PROJECT DISPLAY*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .portfolio-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom var(--clr-1), white);
+  background: linear-gradient(to bottom, var(--clr-1), var(--clr-6));
 }
 
 .title {
@@ -49,8 +49,6 @@ export default {
   justify-content: center;
   align-items: center;
   margin: 2rem;
-  background-color: var(--clr-1);
-  border: 2px solid var(--clr-6);
   
 }
 
@@ -65,46 +63,44 @@ export default {
 .project-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  width: 70%;
+  gap: 3rem;
   max-width: 1200px;
 }
 
-i {
-  font-size: 1.3rem;
-  color: white;
-}
-
-
-
-
-.project {
-  background-color: var(--clr-6);
+.project-card {
   padding: 1.5rem;
-  border-radius: 8px;
+  background-color: var(--clr-1);
+  border: 1px solid var(--clr-6);
+  border-radius: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--clr-1);
-}
-
-
-.project h2 {
-  margin-bottom: 1rem;
 }
 
 .project-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  padding: 0 1.5rem;
+  margin-top: 1rem;
 }
 
 .project-header h2 {
   margin: 0;
 }
 
-.icon-heading {
+i {
+  font-size: 1.4rem;
+  color: var(--clr-7);
+}
+
+.icon-list {
   display: flex;
   gap: .5rem;
+}
+
+.description {
+  padding: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: .9rem;
 }
 
 .link {
@@ -117,10 +113,15 @@ i {
 a {
   text-decoration: none;
   padding: .5rem 1rem;
-  color: white;
+  color: whitesmoke;
   transition: color .2s ease-in;
-  border: 1px solid white;
+  border: 1px solid var(--clr-6);
   border-radius: 1rem;
+  background: linear-gradient(
+    to bottom, 
+    var(--clr-3), 
+    var(--clr-4)
+    );
 }
 
 a:hover {

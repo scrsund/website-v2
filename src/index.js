@@ -17,14 +17,14 @@ const store = createStore({
       projects: [{
         title: 'Website V1',
         icons: ["vue", "express", "sql", "git"],
-        description: 'Website V1 was the first iteration of this website. I had a bigger emphasis on the design and functionality portion of it, but decided that a simplistic design would be better for a portfolio appeal, which led me to create V2. The main difference between the two websites is that I added a HoverCard component through SHAD and connected the contact form to a database using express.js and postgreSQL.',
+        description: "Website V1 was the first iteration of this website. I put a bigger emphasis on features and functionality, but decided that a simplistic design would be better for a portfolio appeal, which led me to create V2. <br><br>The main difference between the two websites is the use of vue-router and state management systems to cater to each website's needs. A contact form using Express.js and PostgreSQL was also implemented in V1.",
         demoLink: 'https://my-website-ten-jet-20.vercel.app/home',
         gitHubLink: 'https://github.com/scrsund/scr-website',
       },
       {
         title: 'Recipe App',
         icons: ["html", "css", "vue"],
-        description: 'The Recipe App was the first Vue.js project I did on my own. Through inspiration from a project in the Udemy Course I was taking, I wanted to challenge my understanding of Vue.js by creating something simple to understand but had more complexity.',
+        description: 'The Recipe App was the first Vue.js project I did on my own. Through inspiration from a project in the Udemy Course I was taking, I wanted to challenge my understanding of Vue.js by creating something simple to understand but had more complexity. <br><br>The app demonstrates knowledge in reusable components, state management, component communication patterns (such as props, provide/inject, slots, etc), and CSS scoped styling.',
         demoLink: '',
         gitHubLink: 'https://github.com/scrsund/recipe-app',
       },
