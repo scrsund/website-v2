@@ -6,11 +6,12 @@
     <div class="project-wrapper">
       <div class="project-card" v-for="(project) in projects" :key="project.title">
         <div class="project-header">
-          <h2>{{project.title}}</h2>
+          <h2 v-html="project.title"></h2>
           <div class="icon-list">
             <i v-for="icon in getProjectIcons(project)" :key="icon" :class="icon"></i>
           </div>
         </div>
+        <hr>
         <p v-html="project.description" class="description"></p>
         <div class="link">
           <a :href="project.demoLink" target="_blank" rel="noopener noreferrer">Live Demo</a>
@@ -48,7 +49,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem;
+  margin: 3rem;
   
 }
 
@@ -65,6 +66,7 @@ export default {
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
   max-width: 1200px;
+  margin-bottom: 3rem;
 }
 
 .project-card {
@@ -97,8 +99,14 @@ i {
   gap: .5rem;
 }
 
+hr {
+  margin: 2rem 1.5rem;
+  width: 5rem;
+}
+
 .description {
   padding: 1.5rem;
+  padding-top: 0;
   font-family: 'Poppins', sans-serif;
   font-size: .9rem;
 }
