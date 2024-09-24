@@ -3,8 +3,8 @@
     <router-link link to="/home" class="logo">sarahsund</router-link>
     <div class="right-menu">
       <!-- <router-link to="/home">Home</router-link> -->
-      <router-link to="/about">Projects</router-link>
-      <router-link to="/contact">Contact</router-link>
+      <router-link to="/home#projects">Projects</router-link>
+      <router-link to="/home#contact">Contact</router-link>
     </div>
   </header>
 </template>

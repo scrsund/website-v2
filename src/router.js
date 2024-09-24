@@ -9,11 +9,17 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: "/", redirect: "/home" },
-    // { path: "/start", component: StartPage },
     { path: "/home", component: HomePage },
-    // { path: "/about", component: AboutPage },
-    // { path: "/contact", component: ContactPage },
   ],
+  scrollBehavior(to){
+    if(to.hash){
+      return {
+        el: to.hash,
+        behavior: 'smooth'
+      };
+    }
+    return {top: 0};
+  },
 });
 
 export default router;

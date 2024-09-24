@@ -39,7 +39,7 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background-color: var(--clr-1);
+  background-color: var(--clr-2);
   transition: 0.3s;
   /*padding: 1rem;
   position: fixed;

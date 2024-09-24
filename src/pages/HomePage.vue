@@ -14,12 +14,14 @@
       </div>
     </section>
     <!-- PORTFOLIO PROJECTS-->
-     <PortfolioContent />
+     <section id="projects" class="portfolio-content">
+       <PortfolioContent />
+     </section>
     <!-- CONTACT INFO -->
-    <section class="contact">
+    <section class="contact" id="contact">
      <hr>
-      <h1>Get in touch!</h1>
-      <p>Email me at scr.sund@gmail.com</p>
+      <h1 class="contact-title">Like what you see?</h1>
+      <p class="contact-contents">Contact me at scr.sund@gmail.com 📩</p>
     </section>
   </main>
 </template>
@@ -118,8 +120,19 @@ export default {
 /*CONTACT SECTION*/
 
 .contact {
-  background-color: var(--clr-6);
+  background: linear-gradient(to bottom, var(--clr-6), var(--clr-2));
   padding: 2rem;
+}
+
+.contact-title {
+  margin-left: 2rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.contact-contents{
+  margin-left: 1rem;
+  padding: 0 2rem;
 }
 
 /*RESPONSIVE DESIGN*/

@@ -122,7 +122,8 @@ hr {
 a {
   text-decoration: none;
   padding: .5rem 1rem;
-  font-size: .9rem;
+  font-size: .85rem;
+  font-weight: 500;
   color: whitesmoke;
   transition: color .1s ease-in-out;
   border: 1px solid var(--clr-3);
@@ -143,7 +144,6 @@ a:hover {
     var(--clr-4) 
     );
   border-color: var(--clr-4);
-  color: var(--clr-3);
 }
 
 </style>
