@@ -19,9 +19,7 @@
      </section>
     <!-- CONTACT INFO -->
     <section class="contact" id="contact">
-     <hr>
-      <h1 class="contact-title">Like what you see?</h1>
-      <p class="contact-contents">Contact me at scr.sund@gmail.com 📩</p>
+      <ContactInfo/>
     </section>
   </main>
 </template>
@@ -30,12 +28,14 @@
 import HoverCardAnimation from '../components/HoverCardAnimation.vue';
 import LandingPage from '../components/LandingPage.vue';
 import PortfolioContent from '../components/PortfolioContent.vue';
+import ContactInfo from '../components/ContactInfo.vue';
 
 export default {
   components: {
     HoverCardAnimation,
     LandingPage,
     PortfolioContent,
+    ContactInfo,
   },
 };
 </script>
@@ -122,17 +122,6 @@ export default {
 .contact {
   background: linear-gradient(to bottom, var(--clr-6), var(--clr-2));
   padding: 2rem;
-}
-
-.contact-title {
-  margin-left: 2rem;
-  padding: 1rem;
-  font-size: 1.5rem;
-}
-
-.contact-contents{
-  margin-left: 1rem;
-  padding: 0 2rem;
 }
 
 /*RESPONSIVE DESIGN*/
