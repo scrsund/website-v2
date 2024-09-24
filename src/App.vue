@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-view v-slot="{ Component }">
-      <TheHeader v-if="showHeader" />
+      <TheHeader/>
       <transition name="fade" mode="out-in">
         <component :is="Component" class="transition-component" />
       </transition>
@@ -10,22 +10,12 @@
 </template>
 
 <script>
-import { useRoute } from "vue-router";
-import { computed } from "vue";
 import TheHeader from "./components/layout/TheHeader.vue";
 
 export default {
   name: "App",
   components: {
     TheHeader,
-  },
-  setup() {
-    const route = useRoute();
-    const showHeader = computed(() => route.path !== "/start");
-
-    return {
-      showHeader,
-    };
   },
 };
 </script>
