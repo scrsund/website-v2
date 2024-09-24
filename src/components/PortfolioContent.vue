@@ -14,7 +14,7 @@
         <hr>
         <p v-html="project.description" class="description"></p>
         <div class="link">
-          <a :href="project.demoLink" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          <a v-if="project.demoLink" :href="project.demoLink" target="_blank" rel="noopener noreferrer">Live Demo</a>
           <a :href="project.gitHubLink" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>

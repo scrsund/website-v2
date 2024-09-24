@@ -30,16 +30,18 @@
 .contents{
   width: 40%;
   font-family: 'Poppins', sans-serif;
+  font-size: .9rem;
 }
 
 .email {
   font-family: "Poppins", sans-serif;
+  font-size: .9rem;
 }
 
 i{
   color: rgb(96, 96, 96);
-  font-size: 1.8rem;
-  padding: .5rem;
+  font-size: 1.6rem;
+  padding: .4rem;
   text-decoration: none;
   cursor: pointer;
 }
