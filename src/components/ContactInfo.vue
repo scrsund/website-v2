@@ -36,13 +36,10 @@
   font-family: "Poppins", sans-serif;
 }
 
-.icons {
-}
-
 i{
   color: rgb(96, 96, 96);
   font-size: 1.8rem;
-  padding: .3rem;
+  padding: .5rem;
   text-decoration: none;
   cursor: pointer;
 }

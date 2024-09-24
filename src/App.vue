@@ -14,7 +14,7 @@
 import { useRoute } from "vue-router";
 import { computed } from "vue";
 import TheHeader from "./components/layout/TheHeader.vue";
-import TheFooter from "./components/layout/TheFooter.vue";
+import TheFooter from "./unused/TheFooter.vue";
 
 export default {
   name: "App",
