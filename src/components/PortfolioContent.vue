@@ -64,12 +64,13 @@ export default {
 .project-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
   max-width: 1200px;
   margin-bottom: 3rem;
+  gap: 3.5rem;
 }
 
 .project-card {
+  width: 25rem;
   padding: 1.5rem;
   background-color: var(--clr-1);
   border: 1px solid var(--clr-6);
@@ -115,25 +116,34 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 a {
   text-decoration: none;
   padding: .5rem 1rem;
+  font-size: .9rem;
   color: whitesmoke;
-  transition: color .2s ease-in;
-  border: 1px solid var(--clr-6);
+  transition: color .1s ease-in-out;
+  border: 1px solid var(--clr-3);
   border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
   background: linear-gradient(
     to bottom, 
-    var(--clr-3), 
-    var(--clr-4)
+    var(--clr-4), 
+    var(--clr-3)
     );
 }
 
 a:hover {
-  color: var(--clr-6);
+  background: linear-gradient(
+    to bottom, 
+    var(--clr-3),
+    var(--clr-4) 
+    );
+  border-color: var(--clr-4);
+  color: var(--clr-3);
 }
 
 </style>

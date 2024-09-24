@@ -2,7 +2,7 @@
 <hover-card>
   <hover-card-trigger>
     <home-card>
-      <router-link to="/about">Hi, I'm Sarah 👋</router-link>
+      <router-link to="/home">Hi, I'm Sarah 👋</router-link>
     </home-card>
   </hover-card-trigger>
   <hover-card-content>

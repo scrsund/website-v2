@@ -16,8 +16,8 @@
     <!-- PORTFOLIO PROJECTS-->
      <PortfolioContent />
     <!-- CONTACT INFO -->
-     <hr>
     <section class="contact">
+     <hr>
       <h1>Get in touch!</h1>
       <p>Email me at scr.sund@gmail.com</p>
     </section>
@@ -113,6 +113,13 @@ export default {
   0%{margin-top: 0;}
   50%{margin-top: 35px;}
   100%{margin-top: 0;}
+}
+
+/*CONTACT SECTION*/
+
+.contact {
+  background-color: var(--clr-6);
+  padding: 2rem;
 }
 
 /*RESPONSIVE DESIGN*/

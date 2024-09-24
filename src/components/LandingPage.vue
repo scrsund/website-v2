@@ -2,7 +2,6 @@
   <div class="text-container">
     <h2 class="title">I'm a <span>Frontend Developer</span> with a passion for learning new skills.</h2>
     <div class="tech-stack">
-
       <h2 class="subheading">The tech stack I'm familiar with:</h2>
       <div class="icon-list">
         <div class="icon-title">
@@ -61,19 +60,19 @@
   color: var(--clr-4);
 }
 
+.title {
+  position: relative;
+  font-size: 1.4rem;
+  color: whitesmoke;
+  text-align: center;
+}
+
 .tech-stack {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 1.5rem;
-}
-
-.title {
-  position: relative;
-  font-size: 1.4rem;
-  color: whitesmoke;
-  text-align: center;
 }
 
 .subheading {
