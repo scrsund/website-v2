@@ -72,20 +72,4 @@ header {
     background-color: transparent !important;
   }
 }
-
-/*footer {
-  padding: 1rem;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-}
-
-@media (max-width: 480px) {
-  header {
-    background-color: transparent;
-  }
-
-  footer {
-  }
-}*/
 </style>
