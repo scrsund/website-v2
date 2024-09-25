@@ -50,7 +50,7 @@ i{
 }
 
 i:hover{
-  color: #ddd;
+  color: var(--clr-ntr-2);
 }
 
 @media(max-width: 1000px){
