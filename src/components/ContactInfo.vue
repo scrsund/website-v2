@@ -25,7 +25,6 @@
   height: 18rem;
 }
 
-
 .wrapper p {
   padding: .2rem 0;
   font-family: 'Poppins', sans-serif;
@@ -42,10 +41,11 @@
 }
 
 i{
-  color: rgb(96, 96, 96);
+  color: var(--clr-7);
   font-size: 1.6rem;
   padding: .4rem;
   text-decoration: none;
+  transition: color .3s ease;
   cursor: pointer;
 }
 
