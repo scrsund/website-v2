@@ -73,7 +73,7 @@ export default {
   text-decoration: none;
   padding: 0.5rem;
   font-size: 32px;
-  color: whitesmoke;
+  color: var(--clr-ntr-2);
   font-weight: 700;
   font-family: "Raleway", sans-serif;
 }

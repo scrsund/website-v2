@@ -132,17 +132,16 @@ a {
   font-size: .8rem;
   font-weight: 500;
   color: whitesmoke;
-  transition: color .1s ease-in-out;
-  border: 1px solid var(--clr-3);
+  transition: color .3s ease-in-out;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
   background: linear-gradient(
     to bottom, 
     var(--clr-4), 
     var(--clr-3)
     );
-}
+  border: 1px solid var(--clr-3);
+  }
 
 a:hover {
   background: linear-gradient(
