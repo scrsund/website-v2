@@ -148,6 +148,20 @@ a:hover {
   .project-card{
     width: 18rem;
   }
+
+  .icon-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .3rem;
+  }
+
+  .project-header{
+    padding: 0;
+  }
+
+  .project-header h2{
+    padding: .5rem 1rem;
+  }
 }
 
 @media(max-width: 480px){
@@ -158,6 +172,14 @@ a:hover {
 
   .project-card{
     width: 20rem;
+  }
+
+  .icon-list{
+    display: flex;
+  }
+
+  i{
+    font-size: 1.2rem;
   }
 }
 

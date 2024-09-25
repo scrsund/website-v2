@@ -112,6 +112,14 @@
     margin-top: 2rem;
     width: 20rem;
   }
+
+  .icon-title i{
+    font-size: 1.5rem;
+  }
+
+  .icon-title h3{
+    font-size: .5rem;
+  }
 }
 
 @media(max-width: 480px){
