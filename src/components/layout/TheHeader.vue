@@ -39,7 +39,7 @@ header {
 }
 
 .right-menu a:hover {
-  color: #bcbcbc;
+  color: var(--clr-7);
 }
 
 @media (max-width: 480px){
