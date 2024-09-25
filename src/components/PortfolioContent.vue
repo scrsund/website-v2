@@ -79,7 +79,7 @@ export default {
 .project-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 1.5rem;
   margin-top: 1rem;
 }
@@ -95,7 +95,9 @@ i {
 
 .icon-list {
   display: flex;
-  gap: .5rem;
+  gap: .3rem;
+  flex-shrink: 0;
+  margin-top: .2rem;
 }
 
 hr {
@@ -153,6 +155,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: .3rem;
+    margin-top: .6rem;
   }
 
   .project-header{
@@ -161,10 +164,12 @@ a:hover {
 
   .project-header h2{
     padding: .5rem 1rem;
+    font-size: 1.3rem;
   }
 }
 
 @media(max-width: 480px){
+
   .project-wrapper{
     display: flex;
     flex-direction: column;
@@ -176,6 +181,7 @@ a:hover {
 
   .icon-list{
     display: flex;
+    margin-top: .6rem;
   }
 
   i{
