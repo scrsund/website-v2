@@ -2,22 +2,21 @@
   <main>
     <section class="container">
       <div class="content-wrapper">
-        <div class="box">
+        <section class="box">
           <HoverCardAnimation />
-        </div>
-        <!-- BIO -->
-        <BioContent />
+        </section>
+        <section class="bio">
+          <BioContent />
+        </section>
       </div>
       <div class="arrow-container">
         <span class="arrow"></span>
         <span class="arrow"></span>
       </div>
     </section>
-    <!-- PORTFOLIO PROJECTS-->
     <section id="projects" class="portfolio-content">
       <PortfolioContent />
     </section>
-    <!-- CONTACT INFO -->
     <section class="contact" id="contact">
       <ContactInfo />
     </section>
