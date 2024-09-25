@@ -45,7 +45,13 @@ header {
 
 @media (max-width: 480px){
   header {
-    margin: .5rem 0;
+    margin: .5rem .7rem;
+    padding: 1rem;
+  }
+
+  .right-menu a{
+    padding-left: .7rem;
+    padding-right: 0;
   }
 }
 </style>
