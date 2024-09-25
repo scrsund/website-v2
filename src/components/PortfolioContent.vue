@@ -65,7 +65,7 @@ export default {
   max-width: 1200px;
   margin-bottom: 3rem;
   gap: 3.5rem;
-}
+} 
 
 .project-card {
   width: 25rem;
@@ -74,6 +74,12 @@ export default {
   border: 1px solid var(--clr-6);
   border-radius: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform .4s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.07);
+  transition-delay: .23s;
 }
 
 .project-header {
@@ -122,7 +128,8 @@ hr {
 a {
   text-decoration: none;
   padding: .5rem 1rem;
-  font-size: .85rem;
+  font-family: "Poppins", sans-serif;
+  font-size: .8rem;
   font-weight: 500;
   color: whitesmoke;
   transition: color .1s ease-in-out;
