@@ -4,7 +4,7 @@
     <div class="container">
       <h1 class="title">Like what you see?</h1>
       <p class="contents">If you're interested in discussing job opportunities, collaborations, or just want to chat— feel free to reach out. I'd love to hear from you!</p>
-      <p class="email">scr.sund@gmail.com</p>
+      <p class="email">scr.sund@gmail.com ☀️</p>
       <div class="icons">
         <i class="fab fa-github"></i>
         <i class="fab fa-linkedin"></i>
