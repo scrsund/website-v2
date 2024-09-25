@@ -11,12 +11,12 @@
 
 <style scoped>
 header {
-  margin: 1rem;
+  margin: 1rem 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: transparent;
+  padding: 1rem;
+  background-color: var(--clr-1);
 }
 
 .logo {
@@ -24,13 +24,10 @@ header {
   color: whitesmoke;
   cursor: pointer;
   text-decoration: none;
-  margin-left: 2rem;
 }
 
 .right-menu {
   display: flex;
-  gap: 30px;
-  margin-right: 2rem;
 }
 
 .right-menu a {
@@ -39,9 +36,16 @@ header {
   display: flex;
   align-items: center;
   transition: 0.3s;
+  padding: 0 .5rem;
 }
 
 .right-menu a:hover {
   color: #bcbcbc;
+}
+
+@media (max-width: 480px){
+  header {
+    margin: .5rem 0;
+  }
 }
 </style>

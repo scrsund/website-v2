@@ -62,11 +62,6 @@ body {
   opacity: 0;
 }
 
-header {
-  background-color: transparent !important;
-  z-index: 1000;
-}
-
 @media (max-width: 480px) {
   header {
     background-color: transparent !important;

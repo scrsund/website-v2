@@ -82,11 +82,6 @@
 
 /*ICON DISPLAY*/
 
-i {
-  font-size: 1.5rem;
-  color: white;
-}
-
 
 .icon-list {
   display: flex;
