@@ -20,6 +20,14 @@ const store = createStore({
           name:"Vue.js",
           code: 'fa-brands fa-vuejs'
         },
+        figma: {
+          name:"Figma",
+          code: 'fa-brands fa-figma'
+        },
+        git: {
+          name:"Git",
+          code: 'fa-brands fa-git'
+        },
         express: {
           name:"Express.js",
           code: 'fa-brands fa-node-js'
@@ -31,14 +39,6 @@ const store = createStore({
         sql: {
           name:"SQL",
           code: 'fa-solid fa-database'
-        },
-        git: {
-          name:"Git",
-          code: 'fa-brands fa-git'
-        },
-        figma: {
-          name:"Figma",
-          code: 'fa-brands fa-figma'
         },
       },
       projects: [{

@@ -1,8 +1,8 @@
 <template>
   <section class="text-container">
-    <h2 class="title">I'm a <span class="highlight">Frontend Developer</span> with a passion for learning new skills.</h2>
+    <h2 class="title">I'm a <span class="frontend">Frontend Developer</span> with a passion for learning new skills. <br><span class="backend">I even know a little bit of backend too.</span></h2>
     <div class="tech-stack">
-      <h2 class="subheading">The tech stack I'm familiar with:</h2>
+      <!-- <h2 class="subheading">The tech stack I'm familiar with:</h2> -->
       <ul class="icon-list">
         <li class="icon-container" v-for="icon in icons" :key="icon">
           <i :class="icon.code"></i>
@@ -41,8 +41,12 @@ export default {
   text-align: center;
 }
 
-.title .highlight {
+.title .frontend {
   color: var(--clr-4);
+}
+
+.title .backend {
+  font-size: .8rem;
 }
 
 .tech-stack {
