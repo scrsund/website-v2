@@ -49,4 +49,19 @@ i{
 i:hover{
   color: #ddd;
 }
+
+@media(max-width: 1000px){
+  .contents{
+    width: 50%;
+  }
+}
+
+@media(max-width: 480px){
+  .container{
+    margin: 0;
+  }
+  .contents{
+    width: 100%;
+  }
+}
 </style>
