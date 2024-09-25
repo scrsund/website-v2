@@ -4,15 +4,42 @@ const store = createStore({
   state() {
     return {
       icons:{
-        html: 'fa-brands fa-html5',
-        css: 'fa-brands fa-css3-alt',
-        js: 'fa-brands fa-js',
-        vue: 'fa-brands fa-vuejs',
-        express: 'fa-brands fa-node-js',
-        python: 'fa-brands fa-python',
-        sql: 'fa-solid fa-database',
-        git: 'fa-brands fa-git',
-        figma: 'fa-brands fa-figma',
+        html: {
+          name:"HTML",
+          code: 'fa-brands fa-html5'
+        },
+        css: {
+          name:"CSS",
+          code: 'fa-brands fa-css3-alt'
+        },
+        js: {
+          name:"JavaScript",
+          code: 'fa-brands fa-js'
+        },
+        vue: {
+          name:"Vue.js",
+          code: 'fa-brands fa-vuejs'
+        },
+        express: {
+          name:"Express.js",
+          code: 'fa-brands fa-node-js'
+        },
+        python: {
+          name:"Python",
+          code: 'fa-brands fa-python'
+        },
+        sql: {
+          name:"SQL",
+          code: 'fa-solid fa-database'
+        },
+        git: {
+          name:"Git",
+          code: 'fa-brands fa-git'
+        },
+        figma: {
+          name:"Figma",
+          code: 'fa-brands fa-figma'
+        },
       },
       projects: [{
         title: 'Website V1',
@@ -47,7 +74,7 @@ const store = createStore({
   },
   getters: {
     getProjectIcons: (state) => (project) => {
-      return project.icons.map(iconKey => state.icons[iconKey])
+      return project.icons.map(iconKey => state.icons[iconKey]['code'])
     }
   }
 });

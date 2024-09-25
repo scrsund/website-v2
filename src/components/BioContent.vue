@@ -3,7 +3,19 @@
     <h2 class="title">I'm a <span>Frontend Developer</span> with a passion for learning new skills.</h2>
     <div class="tech-stack">
       <h2 class="subheading">The tech stack I'm familiar with:</h2>
-      <div class="icon-list">
+
+
+      <!-- USING MAP STATE-->
+      <ul class="icon-list">
+        <li class="icon-title" v-for="icon in icons" :key="icon">
+          <i :class="icon.code"></i>
+          <h3>{{icon.name}}</h3>
+        </li>
+      </ul>
+
+
+      <!-- ORIGINAL CODE -->
+      <!-- <div class="icon-list">
         <div class="icon-title">
           <i class="fa-brands fa-html5"></i>
           <h3>HTML</h3>
@@ -40,13 +52,29 @@
           <i class="fa-brands fa-figma"></i>
           <h3>Figma</h3>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
 
+<script>
+import { mapState } from 'vuex';
+
+export default {
+  computed: {
+    ...mapState(['icons'])
+  }
+}
+
+</script>
 
 <style scoped>
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 .text-container {
   margin-top: 3rem;
   width: 25rem;
@@ -78,10 +106,6 @@
 .subheading {
   font-size: 1rem;
 }
-
-
-/*ICON DISPLAY*/
-
 
 .icon-list {
   display: flex;

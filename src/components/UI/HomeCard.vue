@@ -5,11 +5,6 @@
 </template>
 
 <style scoped>
-@property --gradient-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
 
 .card {
   display: flex;
@@ -46,26 +41,32 @@
     var(--clr-5),
     var(--clr-4),
     var(--clr-3)
-  );
-  border-radius: inherit;
-  z-index: -1;
-  animation: rotation 7s linear infinite;
-}
-
-.card::after {
-  filter: blur(3.5rem);
-}
-
-@keyframes rotation {
-  0% {
-    --gradient-angle: 0deg;
+    );
+    border-radius: inherit;
+    z-index: -1;
+    animation: rotation 7s linear infinite;
   }
-  100% {
-    --gradient-angle: 360deg;
+  
+  .card::after {
+    filter: blur(3.5rem);
   }
-}
-
-@media (max-width: 480px) {
+  
+  @property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  @keyframes rotation {
+    0% {
+      --gradient-angle: 0deg;
+    }
+    100% {
+      --gradient-angle: 360deg;
+    }
+  }
+  
+  @media (max-width: 480px) {
   .card {
     height: 15rem;
     width: 15rem;
