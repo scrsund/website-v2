@@ -48,7 +48,6 @@ export default {
   justify-content: center;
   align-items: center;
   margin: 3rem;
-  
 }
 
 .portfolio-content h1 {
