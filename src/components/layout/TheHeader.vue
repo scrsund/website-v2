@@ -35,10 +35,22 @@ header {
   display: flex;
   align-items: center;
   padding: 0 .5rem;
+  position: relative;
 }
 
-.right-menu a:hover {
-  text-decoration: underline;
+.right-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 6px;
+  background-color: var(--clr-ntr-2);
+  transition: width .3s ease;
+}
+
+.right-menu a:hover::after {
+  width: 83%;
 }
 
 @media (max-width: 480px){
