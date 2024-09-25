@@ -2,38 +2,38 @@
   <main>
     <section class="container">
       <div class="content-wrapper">
-      <div class="box">
-        <HoverCardAnimation />
+        <div class="box">
+          <HoverCardAnimation />
+        </div>
+        <!-- BIO -->
+        <BioContent />
       </div>
-      <!-- BIO -->
-       <LandingPage />
-    </div>
       <div class="arrow-container">
         <span class="arrow"></span>
         <span class="arrow"></span>
       </div>
     </section>
     <!-- PORTFOLIO PROJECTS-->
-     <section id="projects" class="portfolio-content">
-       <PortfolioContent />
-     </section>
+    <section id="projects" class="portfolio-content">
+      <PortfolioContent />
+    </section>
     <!-- CONTACT INFO -->
     <section class="contact" id="contact">
-      <ContactInfo/>
+      <ContactInfo />
     </section>
   </main>
 </template>
 
 <script>
-import HoverCardAnimation from '../components/HoverCardAnimation.vue';
-import LandingPage from '../components/LandingPage.vue';
-import PortfolioContent from '../components/PortfolioContent.vue';
-import ContactInfo from '../components/ContactInfo.vue';
+import HoverCardAnimation from "../components/HoverCardAnimation.vue";
+import BioContent from "../components/BioContent.vue";
+import PortfolioContent from "../components/PortfolioContent.vue";
+import ContactInfo from "../components/ContactInfo.vue";
 
 export default {
   components: {
     HoverCardAnimation,
-    LandingPage,
+    BioContent,
     PortfolioContent,
     ContactInfo,
   },
@@ -41,7 +41,6 @@ export default {
 </script>
 
 <style scoped>
-
 .container {
   width: 100%;
   min-height: 74vh;
@@ -80,7 +79,6 @@ export default {
   font-family: "Raleway", sans-serif;
 }
 
-
 /*ARROW STYLING*/
 .arrow-container {
   display: flex;
@@ -90,7 +88,7 @@ export default {
   height: 100px;
   margin-top: 3rem;
   overflow: hidden;
-  position: relative
+  position: relative;
 }
 
 .arrow {
@@ -103,18 +101,24 @@ export default {
   animation: move 1.1s infinite ease-in-out;
 }
 
-.arrow:nth-of-type(1){
+.arrow:nth-of-type(1) {
   transform: rotate(-45deg);
 }
 
-.arrow:nth-of-type(2){
+.arrow:nth-of-type(2) {
   transform: rotate(45deg);
 }
 
-@keyframes move{
-  0%{margin-top: 0;}
-  50%{margin-top: 35px;}
-  100%{margin-top: 0;}
+@keyframes move {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 35px;
+  }
+  100% {
+    margin-top: 0;
+  }
 }
 
 /*CONTACT SECTION*/

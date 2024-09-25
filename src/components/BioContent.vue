@@ -107,4 +107,8 @@
   color: var(--clr-7);
 }
 
+@media(max-width: 1000px){
+  
+}
+
 </style>
