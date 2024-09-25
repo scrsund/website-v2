@@ -57,9 +57,9 @@ export default {
   margin-top: 1.5rem;
 }
 
-.subheading {
+/*.subheading {
   font-size: 1rem;
-}
+}*/
 
 ul {
   padding: 0;
