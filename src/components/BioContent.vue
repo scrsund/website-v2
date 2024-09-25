@@ -3,56 +3,12 @@
     <h2 class="title">I'm a <span>Frontend Developer</span> with a passion for learning new skills.</h2>
     <div class="tech-stack">
       <h2 class="subheading">The tech stack I'm familiar with:</h2>
-
-
-      <!-- USING MAP STATE-->
       <ul class="icon-list">
         <li class="icon-title" v-for="icon in icons" :key="icon">
           <i :class="icon.code"></i>
           <h3>{{icon.name}}</h3>
         </li>
       </ul>
-
-
-      <!-- ORIGINAL CODE -->
-      <!-- <div class="icon-list">
-        <div class="icon-title">
-          <i class="fa-brands fa-html5"></i>
-          <h3>HTML</h3>
-        </div>
-        <div class="icon-title">
-          <i class="fa-brands fa-css3-alt"></i>
-          <h3>CSS</h3>
-        </div>
-        <div class="icon-title">
-          <i class="fa-brands fa-js"></i>
-          <h3>JavaScript</h3>
-        </div>
-        <div class="icon-title">
-          <i class="fa-brands fa-vuejs"></i>
-          <h3>Vue.js</h3>
-        </div>
-        <div class="icon-title">
-          <i class="fa-brands fa-node-js"></i>
-          <h3>Express.js</h3>
-        </div>
-        <div class="icon-title">
-          <i class="fa-brands fa-python"></i>
-          <h3>Python</h3>
-        </div>
-        <div class="icon-title">
-          <i class="fa-solid fa-database"></i>
-          <h3>SQL</h3>
-        </div>
-        <div class="icon-title">
-          <i class="fa-brands fa-git"></i>
-          <h3>Git</h3>
-        </div>
-        <div class="icon-title">
-          <i class="fa-brands fa-figma"></i>
-          <h3>Figma</h3>
-        </div>
-      </div> -->
     </div>
   </section>
 </template>
@@ -69,12 +25,6 @@ export default {
 </script>
 
 <style scoped>
-
-ul {
-  padding: 0;
-  margin: 0;
-}
-
 .text-container {
   margin-top: 3rem;
   width: 25rem;
@@ -84,15 +34,15 @@ ul {
   justify-content: center;
 }
 
-.title span {
-  color: var(--clr-4);
-}
-
 .title {
   position: relative;
   font-size: 1.4rem;
   color: whitesmoke;
   text-align: center;
+}
+
+.title span {
+  color: var(--clr-4);
 }
 
 .tech-stack {
@@ -105,6 +55,11 @@ ul {
 
 .subheading {
   font-size: 1rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 .icon-list {
