@@ -34,12 +34,11 @@ header {
   color: whitesmoke;
   display: flex;
   align-items: center;
-  transition: 0.3s;
   padding: 0 .5rem;
 }
 
 .right-menu a:hover {
-  color: var(--clr-7);
+  text-decoration: underline;
 }
 
 @media (max-width: 480px){
