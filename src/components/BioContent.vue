@@ -1,10 +1,10 @@
 <template>
   <section class="text-container">
-    <h2 class="title">I'm a <span>Frontend Developer</span> with a passion for learning new skills.</h2>
+    <h2 class="title">I'm a <span class="highlight">Frontend Developer</span> with a passion for learning new skills.</h2>
     <div class="tech-stack">
       <h2 class="subheading">The tech stack I'm familiar with:</h2>
       <ul class="icon-list">
-        <li class="icon-title" v-for="icon in icons" :key="icon">
+        <li class="icon-container" v-for="icon in icons" :key="icon">
           <i :class="icon.code"></i>
           <h3>{{icon.name}}</h3>
         </li>
@@ -41,7 +41,7 @@ export default {
   text-align: center;
 }
 
-.title span {
+.title .highlight {
   color: var(--clr-4);
 }
 
@@ -67,23 +67,32 @@ ul {
   gap: .5rem;
 }
 
-.icon-title {
+.icon-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.icon-title i {
+.icon-container i {
   font-size: 2rem;
   margin-bottom: .5rem;
-  color: var(--clr-7);
 }
 
-.icon-title h3 {
+
+.icon-container h3 {
   margin: 0;
   font-size: .6rem;
+}
+
+.icon-container i, .icon-container h3{
   color: var(--clr-7);
+  transition: color .3s ease-in-out;
+}
+
+.icon-container:hover i, .icon-container:hover h3{
+  color: var(--clr-c1);
+  transition-delay: .03s
 }
 
 @media(max-width: 1000px){
