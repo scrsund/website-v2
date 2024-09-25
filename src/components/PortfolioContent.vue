@@ -144,4 +144,21 @@ a:hover {
   border-color: var(--clr-4);
 }
 
+@media(max-width: 1000px){
+  .project-card{
+    width: 18rem;
+  }
+}
+
+@media(max-width: 480px){
+  .project-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card{
+    width: 20rem;
+  }
+}
+
 </style>

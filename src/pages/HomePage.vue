@@ -128,63 +128,25 @@ export default {
 }
 
 /*RESPONSIVE DESIGN*/
-
-@media (max-width: 1000px) {
-  .container {
-    display: grid;
+@media(max-width: 1000px){
+  .arrow-container{
+    margin-top: 5rem;
   }
 
-  .box {
-    margin-bottom: 0;
-  }
-
-  .text-container {
-    margin-top: 4rem;
-    text-align: center;
-  }
-
-  .title {
-    text-align: center;
-  }
-
-  .subtitle {
-    text-align: center;
+  .portfolio-content{
+    margin-top: 1rem;
   }
 }
 
-@media (max-width: 480px) {
-  main {
-    overflow-x: hidden;
-  }
-  .container {
-    display: grid;
+@media(max-width: 480px){
+  .content-wrapper{
+    flex-direction: column;
+    align-items: center;
   }
 
-  .box {
-    margin-bottom: 0;
+  .arrow-container{
+    margin-top: 2rem;
   }
 
-  .text-container {
-    text-align: center;
-    margin-top: 3rem;
-  }
-
-  .title {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-    margin-right: 1rem;
-  }
-
-  i {
-    display: none;
-  }
-
-  .box a {
-    font-size: 28px;
-  }
 }
 </style>

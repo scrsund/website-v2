@@ -108,8 +108,17 @@
 }
 
 @media(max-width: 1000px){
-  
-  
+  .text-container{
+    margin-top: 2rem;
+    width: 20rem;
+  }
+}
+
+@media(max-width: 480px){
+  .text-container{
+    margin: 0;
+    margin-top: 3rem;
+  }
 }
 
 </style>
