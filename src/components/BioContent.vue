@@ -2,11 +2,10 @@
   <section class="hero-section">
      <div class="text-container">
       <!-- <h2 class="title">Need someone to bring <span class="creative-text">creative ideas</span> to life? <span class="description">I'm a <span class="frontend">Frontend Developer</span> with a passion for pushing the envelope— and gaining new skills in the process! I'm all about the details and I thrive on learning whatever's necessary to get the job done. I even know a little bit of backend too <span class="emoji">😉</span></span></h2> -->
-      <h2 class="title">Need someone to bring <span class="creative-text">creative ideas</span> to life? <span class="description">With a passion for pushing the envelope and gaining skills along the way, I might be the <span class="frontend">Frontend Developer</span> you're looking for! I'm all about the details and I thrive on learning whatever's necessary to get the job done. I even know a little bit of backend too <span class="emoji">😉</span></span></h2>
-      <h3 class="call-to-action">Shoot me a message!</h3>
+      <h2 class="title">Need someone to bring <span class="creative-text">creative ideas</span> to life? <span class="description">With a passion for pushing the envelope and gaining new skills in the process, I might be the <span class="frontend">Frontend Developer</span> you're looking for! I'm all about the details and I thrive on learning whatever's necessary to get the job done. I even know a little bit of backend too <span class="emoji">😉</span></span></h2>
+      <h3 class="call-to-action">Let's build something together!</h3>
      </div>
     <div class="tech-stack">
-      <!-- <h2 class="subheading">The tech stack I'm familiar with:</h2> -->
       <ul class="icon-list">
         <li class="icon-container" v-for="icon in icons" :key="icon">
           <i :class="icon.code"></i>
@@ -30,24 +29,22 @@ export default {
 
 <style scoped>
 .hero-section {
-  width: 26rem;
+  width: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 4rem;
-  padding: .5rem 0;
+  margin-left: 2rem;
 }
 
 .text-container{
   font-family: "Roboto", sans-serif;
-  text-align: center;
+  text-align: left;
 }
 
 .title {
   position: relative;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: whitesmoke;
-  text-align: center;
   margin-bottom: 1.3rem;
   font-family: "Raleway", sans-serif;
 }
@@ -61,13 +58,12 @@ export default {
 
 .title .frontend {
   color: var(--clr-p1);
-  font-size: 1rem;
+  font-size: .8rem;
 }
 
 .title .description {
   font-size: .8rem;
-  font-family: "Roboto", sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
 
 .title .emoji {
@@ -76,7 +72,7 @@ export default {
 
 .call-to-action {
   font-size: .9rem;
-
+  font-family: "Poppins", sans-serif;
 }
 
 
@@ -84,8 +80,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin-top: 1.2rem;
+  align-items: left;
+  margin-top: 1.5rem;
 }
 
 /*.subheading {
