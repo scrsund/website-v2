@@ -34,6 +34,7 @@
 .title {
   font-size: 1.7rem;
   margin-bottom: 1.3rem;
+  font-family: "Raleway", sans-serif;
 }
 
 .contents{
