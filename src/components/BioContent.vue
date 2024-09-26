@@ -1,7 +1,6 @@
 <template>
   <section class="hero-section">
      <div class="text-container">
-      <!-- <h2 class="title">Need someone to bring <span class="creative-text">creative ideas</span> to life? <span class="description">I'm a <span class="frontend">Frontend Developer</span> with a passion for pushing the envelope— and gaining new skills in the process! I'm all about the details and I thrive on learning whatever's necessary to get the job done. I even know a little bit of backend too <span class="emoji">😉</span></span></h2> -->
       <h2 class="title">Need someone to bring <span class="creative-text">creative ideas</span> to life? <span class="description">With a passion for pushing the envelope and gaining new skills in the process, I might be the <span class="frontend">Frontend Developer</span> you're looking for! I'm all about the details and I thrive on learning whatever's necessary to get the job done. I even know a little bit of backend too <span class="emoji">😉</span></span></h2>
       <h3 class="call-to-action">Let's build something together!</h3>
      </div>
