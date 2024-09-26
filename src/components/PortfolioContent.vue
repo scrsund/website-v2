@@ -86,16 +86,16 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 1.5rem; /* Same as the card's border radius */
-  padding: 1px; /* Adjust this value to control the thickness of the border */
-  background: linear-gradient(43deg, var(--clr-ntr-2), var(--clr-ntr-1)); /* Your gradient */
+  border-radius: 1.5rem;
+  padding: 1px;
+  background: linear-gradient(43deg, var(--clr-ntr-2), var(--clr-ntr-1)); 
   -webkit-mask: 
     linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0); /* Mask to create the border effect */
+    linear-gradient(#fff 0 0);
   mask: 
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
-  mask-composite: exclude; /* To ensure the background doesn't fill the inside */
+  mask-composite: exclude;
   -webkit-mask-composite: exclude;
   z-index: -1;
 }
