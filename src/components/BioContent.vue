@@ -33,7 +33,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 2rem;
+  margin-left: 6rem;
 }
 
 .text-container{

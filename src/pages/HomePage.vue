@@ -59,7 +59,7 @@ export default {
   align-items: flex-start;
   width: 100%;
   margin-bottom: 2rem;
-  margin-left: 3rem;
+  margin-left: 5rem;
 }
 
 .box {
@@ -69,6 +69,7 @@ export default {
   align-items: center;
   cursor: pointer;
   margin-left: 4rem;
+  margin-top: .6rem;
 }
 
 .box a {
