@@ -160,7 +160,7 @@ a {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background: linear-gradient(
     to bottom, 
-    var(--clr-4), 
+    var(--clr-p2), 
     var(--clr-3)
     );
   border: 1px solid var(--clr-3);
@@ -169,8 +169,8 @@ a {
 a:hover {
   background: linear-gradient(
     to bottom, 
-    var(--clr-3),
-    var(--clr-4) 
+    var(--clr-3), 
+    var(--clr-p2) 
     );
   border-color: var(--clr-4);
 }

@@ -55,6 +55,7 @@ body {
   --clr-a3: #967bb6;
   --clr-a4: #d8bfd8;
   --clr-p1: #4eb8a8;
+  --clr-p2: #4db8a6;
 }
 
 .transition-component {
