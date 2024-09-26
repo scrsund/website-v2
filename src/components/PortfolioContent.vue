@@ -68,6 +68,7 @@ export default {
 } 
 
 .project-card {
+  position: relative;
   width: 25rem;
   padding: 1.5rem;
   background-color: var(--clr-1);
@@ -75,6 +76,28 @@ export default {
   border-radius: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform .4s ease-in-out;
+  z-index: 1;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1.5rem; /* Same as the card's border radius */
+  padding: 1px; /* Adjust this value to control the thickness of the border */
+  background: linear-gradient(43deg, var(--clr-ntr-2), var(--clr-ntr-1)); /* Your gradient */
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0); /* Mask to create the border effect */
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude; /* To ensure the background doesn't fill the inside */
+  -webkit-mask-composite: exclude;
+  z-index: -1;
 }
 
 .project-card:hover {
