@@ -145,6 +145,7 @@ ul {
   .hero-section{
     align-items: center;
     margin: 0;
+    width: 25rem;
   }
 
   .text-container{
