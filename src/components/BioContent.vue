@@ -1,6 +1,10 @@
 <template>
-  <section class="text-container">
-    <h2 class="title">I'm a <span class="frontend">Frontend Developer</span> with a passion for learning new skills. <br><span class="backend">I even know a little bit of backend too.</span></h2>
+  <section class="hero-section">
+     <div class="text-container">
+      <!-- <h2 class="title">Need someone to bring <span class="creative-text">creative ideas</span> to life? <span class="description">I'm a <span class="frontend">Frontend Developer</span> with a passion for pushing the envelope— and gaining new skills in the process! I'm all about the details and I thrive on learning whatever's necessary to get the job done. I even know a little bit of backend too <span class="emoji">😉</span></span></h2> -->
+      <h2 class="title">Need someone to bring <span class="creative-text">creative ideas</span> to life? <span class="description">With a passion for pushing the envelope and gaining skills along the way, I might be the <span class="frontend">Frontend Developer</span> you're looking for! I'm all about the details and I thrive on learning whatever's necessary to get the job done. I even know a little bit of backend too <span class="emoji">😉</span></span></h2>
+      <h3 class="call-to-action">Shoot me a message!</h3>
+     </div>
     <div class="tech-stack">
       <!-- <h2 class="subheading">The tech stack I'm familiar with:</h2> -->
       <ul class="icon-list">
@@ -25,13 +29,18 @@ export default {
 </script>
 
 <style scoped>
-.text-container {
-  margin-top: 3rem;
-  width: 25rem;
-  margin-left: 5rem;
+.hero-section {
+  width: 26rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 4rem;
+  padding: .5rem 0;
+}
+
+.text-container{
+  font-family: "Roboto", sans-serif;
+  text-align: center;
 }
 
 .title {
@@ -39,22 +48,44 @@ export default {
   font-size: 1.4rem;
   color: whitesmoke;
   text-align: center;
+  margin-bottom: 1.3rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.title .creative-text {
+  /*background-image: linear-gradient(43deg, var(--clr-ntr-1), var(--clr-7));*/
+  background-image: linear-gradient(43deg, var(--clr-c4), var(--clr-c1), var(--clr-a1), var(--clr-a2), var(--clr-a3), var(--clr-a4), var(--clr-ntr-1));
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .title .frontend {
-  color: var(--clr-4);
+  color: var(--clr-p1);
+  font-size: 1rem;
 }
 
-.title .backend {
+.title .description {
   font-size: .8rem;
+  font-family: "Roboto", sans-serif;
+
 }
+
+.title .emoji {
+  font-size: 1rem;
+}
+
+.call-to-action {
+  font-size: .9rem;
+
+}
+
 
 .tech-stack {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
 }
 
 /*.subheading {

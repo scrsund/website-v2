@@ -59,6 +59,7 @@ export default {
   align-items: flex-start;
   width: 100%;
   margin-bottom: 2rem;
+  margin-left: 1rem;
 }
 
 .box {
