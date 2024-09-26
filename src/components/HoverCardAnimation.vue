@@ -2,7 +2,14 @@
 <hover-card>
   <hover-card-trigger>
     <home-card>
-      <router-link to="/home">Hi, I'm Sarah 👋</router-link>
+      <div class="the-card" :class="{flipped: isFlipped}">
+        <div class="frontside">
+          <router-link to="/home">Hi, I'm Sarah 👋</router-link>
+        </div>
+        <div class="backside">
+          <img src="/me4.JPG"/>
+        </div>
+      </div>
     </home-card>
   </hover-card-trigger>
   <hover-card-content>
@@ -41,6 +48,19 @@ export default {
     HoverCardContent,
     HoverCardTrigger,
   },
+  data(){
+    return {
+      isFlipped: false,
+    }
+  },
+  mounted(){
+    this.flipInterval = setInterval(() => {
+      this.isFlipped = !this.isFlipped;
+    }, 5000)
+  },
+  beforeUnmount(){
+    clearInterval(this.flipInterval);
+  },
   computed: {
     ...mapState(["iconList"]),
   },
@@ -53,6 +73,49 @@ export default {
 </script>
 
 <style scoped>
+
+
+.the-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 4.5rem;
+  transform-style: preserve-3d;
+  transition: all .5s ease;
+}
+
+/*
+.box:hover .the-card {
+  transform: rotateY(180deg);
+  } 
+  */
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.backside img {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;
+  object-position: 0% 20%;
+  border-radius: inherit;
+}
+
+.frontside, .backside {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 4.5rem;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backside{
+  transform: rotateY(180deg);
+}
+/*ORIGINAL STYLING*/
 @keyframes slideOut1 {
   0% {
     opacity: 0;

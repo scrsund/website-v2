@@ -67,6 +67,7 @@ export default {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-left: 4rem;
 }
 
 .box a {
@@ -143,10 +144,14 @@ export default {
     flex-direction: column;
     align-items: center;
   }
+  
+  .box {
+    margin: 0;
+
+  }
 
   .arrow-container{
     margin-top: 2rem;
   }
-
 }
 </style>
