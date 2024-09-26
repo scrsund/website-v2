@@ -52,6 +52,7 @@ export default {
 
 .portfolio-content h1 {
   font-size: 1.8rem;
+  font-family: "Raleway", sans-serif.;
 }
 
 .portfolio-content h2 {

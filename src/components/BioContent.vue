@@ -142,9 +142,27 @@ ul {
 }
 
 @media(max-width: 480px){
+  .hero-section{
+    align-items: center;
+    margin: 0;
+  }
+
   .text-container{
     margin: 0;
     margin-top: 3rem;
+    text-align: center;
+  }
+
+  .tech-stack {
+    align-items: center;
+  }
+
+  .call-to-action{
+    padding: .5rem;
+  }
+
+  .icon-list{
+    gap: .3rem;
   }
 }
 

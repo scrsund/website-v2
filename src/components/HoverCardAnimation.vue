@@ -94,8 +94,8 @@ export default {
 }
 
 .backside img {
-  width: 95%;
-  height: 95%;
+  width: 97%;
+  height: 97%;
   object-fit: cover;
   object-position: 0% 20%;
   border-radius: inherit;
@@ -436,6 +436,10 @@ i {
 
   .box a {
     font-size: 28px;
+  }
+
+  .backside img{
+    border-radius: 3rem;
   }
 }
 
