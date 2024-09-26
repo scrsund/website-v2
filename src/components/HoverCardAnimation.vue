@@ -12,7 +12,7 @@
       </div>
     </home-card>
   </hover-card-trigger>
-  <hover-card-content>
+  <!-- <hover-card-content>
     <div class="icon-container">
       <i
         class="fa-solid fa-music"
@@ -28,7 +28,7 @@
       <i class="fa-solid fa-code" :class="getIconClass(6)"></i>
       <i class="fa-solid fa-drum" :class="getIconClass(7)"></i>
     </div>
-  </hover-card-content>
+  </hover-card-content> -->
 </hover-card>
 </template>
 
@@ -36,7 +36,7 @@
 import HomeCard from "../components/UI/HomeCard.vue";
 import {
   HoverCard,
-  HoverCardContent,
+  // HoverCardContent,
   HoverCardTrigger,
 } from "@/components/UI/hover-card";
 import { mapState } from "vuex";
@@ -45,7 +45,7 @@ export default {
   components: {
     HomeCard,
     HoverCard,
-    HoverCardContent,
+    // HoverCardContent,
     HoverCardTrigger,
   },
   data(){
