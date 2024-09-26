@@ -7,7 +7,7 @@
           <router-link to="/home">Hi, I'm Sarah 👋</router-link>
         </div>
         <div class="backside">
-          <img src="/me4.JPG"/>
+          <img src="/me4.jpg"/>
         </div>
       </div>
     </home-card>
