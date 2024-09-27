@@ -39,6 +39,7 @@ body {
 a{
   text-decoration: none;
   color: whitesmoke;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
