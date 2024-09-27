@@ -56,7 +56,7 @@ const store = createStore({
         gitHubLink: 'https://github.com/scrsund/recipe-app',
       },
       {
-        title: 'Trading Journal<br><i style="font-size: small; color: var(--clr-p1)">in development</i>',
+        title: 'Trading Journal<br><i style="font-size: small; color: var(--clr-p2)">in development</i>',
         icons: ["vue", "express", "sql", "git", "figma"],
         description: 'This project is a passion project. I wanted to create something to help day traders with their psychological hang ups and make it easier to stick to their strategies. It will have features such as reminders, current trades, trade history, predictions, statistics and more.<br><br>It will be the biggest project I have done to-date, and I will be finding ways to broaden my skill set as well as continuing to implement Vue-Router, Vuex, PostgreSQL, and Express.js.',
         demoLink: 'https://trading-journal-iota.vercel.app/dashboard',

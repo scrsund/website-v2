@@ -3,7 +3,7 @@
      <div class="text-container">
       <h2 class="title">Need someone to bring <span class="creative-text">creative ideas</span> to life? <span class="description">With a passion for pushing the envelope and gaining new skills along the way, I might be the <span class="frontend">Front-End Developer</span> you're looking for! I'm all about the details and I thrive on learning whatever's necessary to get the job done. I even know a little bit of back-end too. <span class="emoji">😉</span></span></h2>
       <BaseButton>
-        <router-link to="/home#contact">Let's connect!</router-link>
+        <router-link to="/home#contact" class="button-link">Let's connect!</router-link>
       </BaseButton>
       <!-- <h3 class="call-to-action">Let's build something together!</h3> -->
      </div>
@@ -115,7 +115,6 @@ ul {
   font-size: 2rem;
   margin-bottom: .5rem;
 }
-
 
 .icon-container h3 {
   margin: 0;
