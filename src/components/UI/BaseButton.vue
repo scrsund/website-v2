@@ -21,8 +21,8 @@ button {
   }
 
 button:hover {
-  background: linear-gradient(45deg, #00d084, #4db8a6);
-  box-shadow: 0 0 10px rgba(0, 208, 132, 0.5);
+  background: #4db8a6;
+  box-shadow: 0 0 12px rgba(0, 208, 132, 0.5);
 }
 </style>
 
