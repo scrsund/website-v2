@@ -7,9 +7,9 @@
         <p class="contents">If you're interested in discussing job opportunities, collaborations, or just want to chat— feel free to reach out. I'd love to hear from you!</p>
         <p class="email">scr.sund@gmail.com ☀️</p>
         <div class="icons">
-          <i class="fab fa-github"></i>
-          <i class="fab fa-linkedin"></i>
-          <i class="fab fa-facebook"></i>
+          <a href="https://github.com/scrsund" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sarah-sund-24ab83280/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/sarah.katigbak.7/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
         </div>
       </div>
     </div>
