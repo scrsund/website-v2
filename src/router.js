@@ -19,4 +19,12 @@ const router = createRouter({
   },
 });
 
+router.beforeEach((to, from, next) => {
+  if (to.hash && !from.name && window.location.hash){
+    next({path: '/home', replace: true});
+  } else {
+    next();
+  }
+});
+
 export default router;
