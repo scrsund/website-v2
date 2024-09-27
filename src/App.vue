@@ -36,6 +36,11 @@ body {
   color: whitesmoke;
 }
 
+a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
 :root {
   --clr-1: rgb(21, 21, 21);
   --clr-2: black;
@@ -56,6 +61,7 @@ body {
   --clr-a4: #d8bfd8;
   --clr-p1: #4eb8a8;
   --clr-p2: #4db8a6;
+  --clr-p3: #13777e;
 }
 
 .transition-component {

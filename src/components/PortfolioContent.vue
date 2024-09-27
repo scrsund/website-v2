@@ -14,8 +14,8 @@
         <hr>
         <p v-html="project.description" class="description"></p>
         <div class="link">
-          <a v-if="project.demoLink" :href="project.demoLink" target="_blank" rel="noopener noreferrer">Live Demo</a>
-          <a :href="project.gitHubLink" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <BaseButton v-if="project.demoLink"><a :href="project.demoLink" target="_blank" rel="noopener noreferrer">Live Demo</a></BaseButton>
+          <BaseButton><a :href="project.gitHubLink" target="_blank" rel="noopener noreferrer">GitHub</a></BaseButton>
         </div>
       </div>
     </div>
@@ -24,11 +24,15 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex';
+import BaseButton from './UI/BaseButton.vue';
 
 export default {
   computed: {
     ...mapState(["projects"]),
     ...mapGetters(['getProjectIcons'])
+  },
+  components: {
+    BaseButton,
   }
 }
 </script>
@@ -148,9 +152,9 @@ hr {
   gap: 1.5rem;
 }
 
-a {
+/*a {
   text-decoration: none;
-  padding: .5rem 1rem;
+  padding: .2rem .6rem;
   font-family: "Poppins", sans-serif;
   font-size: .8rem;
   font-weight: 500;
@@ -173,7 +177,7 @@ a:hover {
     var(--clr-p2) 
     );
   border-color: var(--clr-4);
-}
+}*/
 
 @media(max-width: 1000px){
   .project-card{

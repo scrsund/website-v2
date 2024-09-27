@@ -2,7 +2,10 @@
   <section class="hero-section">
      <div class="text-container">
       <h2 class="title">Need someone to bring <span class="creative-text">creative ideas</span> to life? <span class="description">With a passion for pushing the envelope and gaining new skills along the way, I might be the <span class="frontend">Front-End Developer</span> you're looking for! I'm all about the details and I thrive on learning whatever's necessary to get the job done. I even know a little bit of back-end too. <span class="emoji">😉</span></span></h2>
-      <h3 class="call-to-action">Let's build something together!</h3>
+      <BaseButton>
+        <router-link to="/home#contact">Let's connect!</router-link>
+      </BaseButton>
+      <!-- <h3 class="call-to-action">Let's build something together!</h3> -->
      </div>
     <div class="tech-stack">
       <ul class="icon-list">
@@ -17,10 +20,14 @@
 
 <script>
 import { mapState } from 'vuex';
+import BaseButton from './UI/BaseButton.vue';
 
 export default {
   computed: {
     ...mapState(['icons'])
+  },
+  components: {
+    BaseButton,
   }
 }
 
@@ -70,7 +77,7 @@ export default {
 }
 
 .call-to-action {
-  font-size: .9rem;
+  font-size: .8rem;
   font-family: "Poppins", sans-serif;
 }
 
