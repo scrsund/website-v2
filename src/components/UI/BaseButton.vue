@@ -14,7 +14,7 @@ button {
   font-weight: 500;
   background: linear-gradient(to bottom, #1c1c1c, #2e2e2e
   );
-  box-shadow: 0 0 10px rgba(77, 184, 166, 0.5);
+  box-shadow: 0 0 5px rgba(77, 184, 166, 0.5);
   border: 1px solid transparent;
   cursor: pointer;
   transition: background .3s ease-in-out, box-shadow .3s ease-in-out;
