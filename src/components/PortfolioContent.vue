@@ -209,7 +209,7 @@ a:hover {
   }
 
   .project-card{
-    width: 20rem;
+    width: 19rem;
   }
 
   .icon-list{
