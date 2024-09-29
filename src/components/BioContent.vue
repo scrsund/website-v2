@@ -159,8 +159,14 @@ ul {
     text-align: center;
   }
 
+  button{
+    margin-top: 1rem;
+  }
+
   .tech-stack {
     align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
   .call-to-action{
