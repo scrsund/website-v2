@@ -4,18 +4,40 @@
       <h1>My Projects</h1>
     </div>
     <div class="project-wrapper">
-      <div class="project-card" v-for="(project) in projects" :key="project.title">
+      <div
+        class="project-card"
+        v-for="project in projects"
+        :key="project.title"
+      >
         <div class="project-header">
           <h2 v-html="project.title"></h2>
           <div class="icon-list">
-            <i v-for="icon in getProjectIcons(project)" :key="icon" :class="icon"></i>
+            <i
+              v-for="icon in getProjectIcons(project)"
+              :key="icon"
+              :class="icon"
+            ></i>
           </div>
         </div>
-        <hr>
+        <hr />
         <p v-html="project.description" class="description"></p>
         <div class="link">
-          <BaseButton v-if="project.demoLink"><a :href="project.demoLink" target="_blank" rel="noopener noreferrer">Live Demo</a></BaseButton>
-          <BaseButton><a :href="project.gitHubLink" target="_blank" rel="noopener noreferrer">GitHub</a></BaseButton>
+          <BaseButton v-if="project.demoLink"
+            ><a
+              :href="project.demoLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Live Demo</a
+            ></BaseButton
+          >
+          <BaseButton
+            ><a
+              :href="project.gitHubLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            ></BaseButton
+          >
         </div>
       </div>
     </div>
@@ -23,18 +45,18 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
-import BaseButton from './UI/BaseButton.vue';
+import { mapState, mapGetters } from "vuex";
+import BaseButton from "./UI/BaseButton.vue";
 
 export default {
   computed: {
     ...mapState(["projects"]),
-    ...mapGetters(['getProjectIcons'])
+    ...mapGetters(["getProjectIcons"]),
   },
   components: {
     BaseButton,
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
@@ -69,7 +91,7 @@ export default {
   max-width: 1200px;
   margin-bottom: 3rem;
   gap: 3.5rem;
-} 
+}
 
 .project-card {
   position: relative;
@@ -79,7 +101,7 @@ export default {
   border: 1px solid var(--clr-6);
   border-radius: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform .4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
   z-index: 1;
 }
 
@@ -92,12 +114,12 @@ export default {
   bottom: 0;
   border-radius: 1.5rem;
   padding: 1px;
-  background: linear-gradient(43deg, var(--clr-ntr-2), var(--clr-ntr-1)); 
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  background: linear-gradient(43deg, var(--clr-ntr-2), var(--clr-ntr-1));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   mask-composite: exclude;
   -webkit-mask-composite: exclude;
@@ -106,7 +128,7 @@ export default {
 
 .project-card:hover {
   transform: scale(1.07);
-  transition-delay: .23s;
+  transition-delay: 0.23s;
 }
 
 .project-header {
@@ -128,9 +150,9 @@ i {
 
 .icon-list {
   display: flex;
-  gap: .3rem;
+  gap: 0.3rem;
   flex-shrink: 0;
-  margin-top: .2rem;
+  margin-top: 0.2rem;
 }
 
 hr {
@@ -141,8 +163,8 @@ hr {
 .description {
   padding: 1.5rem;
   padding-top: 0;
-  font-family: 'Poppins', sans-serif;
-  font-size: .9rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
 }
 
 .link {
@@ -179,53 +201,51 @@ a:hover {
   border-color: var(--clr-4);
 }*/
 
-@media(max-width: 1000px){
-  .project-card{
+@media (max-width: 1000px) {
+  .project-card {
     width: 18rem;
   }
 
-  .icon-list{
+  .icon-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: .3rem;
-    margin-top: .6rem;
+    gap: 0.3rem;
+    margin-top: 0.6rem;
   }
 
-  .project-header{
+  .project-header {
     padding: 0;
   }
 
-  .project-header h2{
-    padding: .5rem 1rem;
+  .project-header h2 {
+    padding: 0.5rem 1rem;
     font-size: 1.3rem;
   }
 }
 
-@media(max-width: 786px){
-  .project-wrapper{
+@media (max-width: 786px) {
+  .project-wrapper {
     gap: 2rem;
   }
 }
 
-@media(max-width: 480px){
-
-  .project-wrapper{
+@media (max-width: 575px) {
+  .project-wrapper {
     display: flex;
     flex-direction: column;
   }
 
-  .project-card{
+  .project-card {
     width: 19rem;
   }
 
-  .icon-list{
+  .icon-list {
     display: flex;
-    margin-top: .6rem;
+    margin-top: 0.6rem;
   }
 
-  i{
+  i {
     font-size: 1.2rem;
   }
 }
-
 </style>

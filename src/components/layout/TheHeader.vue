@@ -35,47 +35,47 @@ header {
   color: whitesmoke;
   display: flex;
   align-items: center;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   position: relative;
 }
 
 .right-menu a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 1px;
   bottom: 0;
   left: 6px;
   background-color: var(--clr-ntr-2);
-  transition: width .3s ease;
+  transition: width 0.3s ease;
 }
 
 .right-menu a:hover::after {
   width: 83%;
 }
 
-@media(max-width: 1280px){
-  .right-menu a{
-    padding-left: .7rem;
+@media (max-width: 1280px) {
+  .right-menu a {
+    padding-left: 0.7rem;
     padding-right: 0;
   }
 }
 
-@media(max-width: 786px){
+@media (max-width: 786px) {
   header {
-    margin: .5rem .7rem;
+    margin: 0.5rem 0.7rem;
     padding: 1rem;
   }
 }
 
-@media (max-width: 480px){
+@media (max-width: 575px) {
   header {
-    margin: .5rem .7rem;
+    margin: 0.5rem 0.7rem;
     padding: 1rem;
   }
 
-  .right-menu a{
-    padding-left: .7rem;
+  .right-menu a {
+    padding-left: 0.7rem;
     padding-right: 0;
   }
 }

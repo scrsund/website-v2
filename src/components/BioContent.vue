@@ -1,17 +1,30 @@
 <template>
   <section class="hero-section">
-     <div class="text-container">
-      <h2 class="title">Need someone to bring <span class="creative-text">creative ideas</span> to life? <span class="description">With a passion for pushing the envelope and gaining new skills along the way, I might be the <span class="frontend">Front-End Developer</span> you're looking for! I'm all about the details and I thrive on learning whatever's necessary to get the job done. I even know a little bit of back-end too!</span></h2>
+    <div class="text-container">
+      <h2 class="title">
+        Need someone to bring
+        <span class="creative-text">creative ideas</span> to life?
+        <span class="description"
+          >With a passion for pushing the envelope and gaining new skills along
+          the way, I might be the
+          <span class="frontend">Front-End Developer</span> you're looking for!
+          I'm all about the details and I thrive on learning whatever's
+          necessary to get the job done. I even know a little bit of back-end
+          too!</span
+        >
+      </h2>
       <BaseButton>
-        <router-link to="/home#contact" class="button-link">Let's connect!</router-link>
+        <router-link to="/home#contact" class="button-link"
+          >Let's connect!</router-link
+        >
       </BaseButton>
       <!-- <h3 class="call-to-action">Let's build something together!</h3> -->
-     </div>
+    </div>
     <div class="tech-stack">
       <ul class="icon-list">
         <li class="icon-container" v-for="icon in icons" :key="icon">
           <i :class="icon.code"></i>
-          <h3>{{icon.name}}</h3>
+          <h3>{{ icon.name }}</h3>
         </li>
       </ul>
     </div>
@@ -19,18 +32,17 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
-import BaseButton from './UI/BaseButton.vue';
+import { mapState } from "vuex";
+import BaseButton from "./UI/BaseButton.vue";
 
 export default {
   computed: {
-    ...mapState(['icons'])
+    ...mapState(["icons"]),
   },
   components: {
     BaseButton,
-  }
-}
-
+  },
+};
 </script>
 
 <style scoped>
@@ -42,7 +54,7 @@ export default {
   margin-left: 6rem;
 }
 
-.text-container{
+.text-container {
   font-family: "Roboto", sans-serif;
   text-align: left;
 }
@@ -56,18 +68,27 @@ export default {
 }
 
 .title .creative-text {
-  background-image: linear-gradient(43deg, var(--clr-c4), var(--clr-c1), var(--clr-a1), var(--clr-a2), var(--clr-a3), var(--clr-a4), var(--clr-ntr-1));
+  background-image: linear-gradient(
+    43deg,
+    var(--clr-c4),
+    var(--clr-c1),
+    var(--clr-a1),
+    var(--clr-a2),
+    var(--clr-a3),
+    var(--clr-a4),
+    var(--clr-ntr-1)
+  );
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .title .frontend {
   color: var(--clr-p1);
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .title .description {
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-family: "Poppins", sans-serif;
 }
 
@@ -76,10 +97,9 @@ export default {
 }
 
 .call-to-action {
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-family: "Poppins", sans-serif;
 }
-
 
 .tech-stack {
   display: flex;
@@ -100,7 +120,7 @@ ul {
 
 .icon-list {
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .icon-container {
@@ -112,88 +132,90 @@ ul {
 
 .icon-container i {
   font-size: 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .icon-container h3 {
   margin: 0;
-  font-size: .6rem;
+  font-size: 0.6rem;
 }
 
-.icon-container i, .icon-container h3{
+.icon-container i,
+.icon-container h3 {
   color: var(--clr-7);
-  transition: color .3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
-.icon-container:hover i, .icon-container:hover h3{
+.icon-container:hover i,
+.icon-container:hover h3 {
   color: var(--clr-c1);
-  transition-delay: .03s
+  transition-delay: 0.03s;
 }
 
-@media(max-width: 1280px){
-  .hero-section{
+@media (max-width: 1280px) {
+  .hero-section {
     margin: 0;
     margin-left: 2rem;
     width: 28rem;
   }
 
-  .icon-title i{
+  .icon-title i {
     font-size: 1.5rem;
   }
 
-  .icon-title h3{
-    font-size: .5rem;
+  .icon-title h3 {
+    font-size: 0.5rem;
   }
 }
 
-@media(max-width: 780px){
-.hero-section{
-  margin: 0;
-  width: 100%;
-  margin-left: 3rem;
+@media (max-width: 780px) {
+  .hero-section {
+    margin: 0;
+    width: 100%;
+    margin-left: 3rem;
+  }
+
+  .text-container {
+    margin: 0;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .tech-stack {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .icon-list {
+    gap: 0.2rem;
+  }
 }
 
-.text-container{
-  margin: 0;
-}
-
-.title{
-  font-size: 1.4rem;
-}
-
-.tech-stack {
-  margin-top: 1.5rem;
-  font-size: 1rem;
-  margin-bottom: 2rem;
-}
-
-.icon-list{
-  gap: .2rem;
-}
-}
-
-@media(max-width: 480px){
-  .hero-section{
+@media (max-width: 575px) {
+  .hero-section {
     align-items: center;
     margin: 0;
     width: 25rem;
   }
 
-  .text-container{
+  .text-container {
     width: 20rem;
   }
 
-  .text-container{
+  .text-container {
     margin: 0;
     margin-top: 3rem;
     text-align: center;
   }
 
-  button{
+  button {
     margin-top: 1rem;
   }
 
-  .title{
+  .title {
     font-size: 1.6rem;
   }
 
@@ -203,13 +225,12 @@ ul {
     margin-bottom: 3rem;
   }
 
-  .call-to-action{
-    padding: .5rem;
+  .call-to-action {
+    padding: 0.5rem;
   }
 
-  .icon-list{
-    gap: .3rem;
+  .icon-list {
+    gap: 0.3rem;
   }
 }
-
 </style>

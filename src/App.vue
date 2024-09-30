@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-view v-slot="{ Component }">
-      <TheHeader/>
+      <TheHeader />
       <transition name="fade" mode="out-in">
         <component :is="Component" class="transition-component" />
       </transition>
@@ -23,7 +23,7 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 html,
 body {
@@ -36,7 +36,7 @@ body {
   color: whitesmoke;
 }
 
-a{
+a {
   text-decoration: none;
   color: whitesmoke;
   font-family: "Poppins", sans-serif;
@@ -51,7 +51,7 @@ a{
   --clr-6: #3c3b3f;
   --clr-7: #6a6666;
   --clr-ntr-1: #d2b48c;
-  --clr-ntr-2: #FFFFF0;
+  --clr-ntr-2: #fffff0;
   --clr-c1: #ffdb58;
   --clr-c2: #cc5500;
   --clr-c3: #e17b34;
@@ -81,7 +81,7 @@ a{
   opacity: 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 575px) {
   header {
     background-color: transparent !important;
   }

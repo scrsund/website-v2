@@ -1,18 +1,18 @@
 <template>
-<hover-card>
-  <hover-card-trigger>
-    <home-card>
-      <div class="the-card" :class="{flipped: isFlipped}">
-        <div class="frontside">
-          <router-link to="/home">Hi, I'm Sarah 👋</router-link>
+  <hover-card>
+    <hover-card-trigger>
+      <home-card>
+        <div class="the-card" :class="{ flipped: isFlipped }">
+          <div class="frontside">
+            <router-link to="/home">Hi, I'm Sarah 👋</router-link>
+          </div>
+          <div class="backside">
+            <img src="/me4.jpg" />
+          </div>
         </div>
-        <div class="backside">
-          <img src="/me4.jpg"/>
-        </div>
-      </div>
-    </home-card>
-  </hover-card-trigger>
-  <!-- <hover-card-content>
+      </home-card>
+    </hover-card-trigger>
+    <!-- <hover-card-content>
     <div class="icon-container">
       <i
         class="fa-solid fa-music"
@@ -29,7 +29,7 @@
       <i class="fa-solid fa-drum" :class="getIconClass(7)"></i>
     </div>
   </hover-card-content> -->
-</hover-card>
+  </hover-card>
 </template>
 
 <script>
@@ -48,17 +48,17 @@ export default {
     // HoverCardContent,
     HoverCardTrigger,
   },
-  data(){
+  data() {
     return {
       isFlipped: false,
-    }
+    };
   },
-  mounted(){
+  mounted() {
     this.flipInterval = setInterval(() => {
       this.isFlipped = !this.isFlipped;
-    }, 5000)
+    }, 5000);
   },
-  beforeUnmount(){
+  beforeUnmount() {
     clearInterval(this.flipInterval);
   },
   computed: {
@@ -73,22 +73,14 @@ export default {
 </script>
 
 <style scoped>
-
-
 .the-card {
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 4.5rem;
   transform-style: preserve-3d;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
-
-/*
-.box:hover .the-card {
-  transform: rotateY(180deg);
-  } 
-  */
 .flipped {
   transform: rotateY(180deg);
 }
@@ -101,7 +93,8 @@ export default {
   border-radius: inherit;
 }
 
-.frontside, .backside {
+.frontside,
+.backside {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -112,11 +105,11 @@ export default {
   align-items: center;
 }
 
-.backside{
+.backside {
   transform: rotateY(180deg);
 }
 /*ORIGINAL STYLING*/
-@keyframes slideOut1 {
+/*@keyframes slideOut1 {
   0% {
     opacity: 0;
     transform: translate(-630%, -50%);
@@ -277,9 +270,9 @@ export default {
   to {
     opacity: 0;
   }
-}
+}*/
 
-/*important*/
+/*important
 .icon-container {
   position: absolute;
   opacity: 0;
@@ -360,8 +353,7 @@ i {
 .box .icon-position-7 {
   animation: slideIn7 1s ease forwards;
 }
-
-
+*/
 .box {
   position: relative;
   display: flex;
@@ -378,7 +370,6 @@ i {
   font-weight: 700;
   font-family: "Raleway", sans-serif;
 }
-
 
 @media (max-width: 1000px) {
   .container {
@@ -403,7 +394,7 @@ i {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 575px) {
   main {
     overflow-x: hidden;
   }
@@ -438,44 +429,8 @@ i {
     font-size: 28px;
   }
 
-  .backside img{
+  .backside img {
     border-radius: 3rem;
   }
 }
-
-/*
-CIRCLE CALCULATION
-
-center (450%, -700%)
-
-findPoints() {
-      const C_x = 450; // Center x-coordinate in percentage
-      const C_y = -700; // Center y-coordinate in percentage
-      const Point1 = { x: -250, y: -700 }; // Given point1
-      const n = 5; // Total number of points
-
-      // Calculate the radius of the circle
-      const r = Math.abs(C_x - Point1.x); // Since Point1 and Point2 lie on the same horizontal line
-
-      // Calculate the angles for the given points
-      const angle1 = Math.atan2(Point1.y - C_y, Point1.x - C_x);
-
-      // Calculate the angular step between each point
-      const step = (2 * Math.PI) / n;
-
-      const points = [];
-
-      for (let i = 0; i < n; i++) {
-        const angle = angle1 + i * step;
-        const x = C_x + r * Math.cos(angle);
-        const y = C_y + r * Math.sin(angle);
-        points.push({ x, y });
-      }
-
-      this.points = points;
-      console.log(this.points);
-    },
-  */
 </style>
-
-

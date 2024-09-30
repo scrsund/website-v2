@@ -68,7 +68,7 @@ export default {
   align-items: center;
   cursor: pointer;
   margin-left: 4rem;
-  margin-top: .6rem;
+  margin-top: 0.6rem;
 }
 
 .box a {
@@ -130,38 +130,38 @@ export default {
 }
 
 /*RESPONSIVE DESIGN*/
-@media(max-width: 1280px){
-  .content-wrapper{
+@media (max-width: 1280px) {
+  .content-wrapper {
     margin: 0;
   }
-  .arrow-container{
+  .arrow-container {
     margin-top: 5rem;
   }
 
-  .portfolio-content{
+  .portfolio-content {
     margin-top: 1rem;
   }
 }
 
-@media(max-width:786px){
-  .content-wrapper{
+@media (max-width: 786px) {
+  .content-wrapper {
     margin: 0;
     margin-right: 3rem;
   }
 }
 
-@media(max-width: 480px){
-  .content-wrapper{
+@media (max-width: 575px) {
+  .content-wrapper {
     flex-direction: column;
     align-items: center;
     margin: 0;
   }
-  
+
   .box {
     margin: 0;
   }
 
-  .arrow-container{
+  .arrow-container {
     margin-top: 2rem;
   }
 }
