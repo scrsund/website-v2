@@ -155,7 +155,7 @@ ul {
 @media (max-width: 1200px) {
   .hero-section {
     margin: 0;
-    margin-left: 2rem;
+    margin-left: 4rem;
     width: 28rem;
   }
 
@@ -165,6 +165,13 @@ ul {
 
   .icon-title h3 {
     font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 991px){
+  .hero-section{
+    margin-left: 2rem;
+    width: 25rem;
   }
 }
 

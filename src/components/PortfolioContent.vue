@@ -223,9 +223,6 @@ a:hover {
   }
 }
 
-@media (max-width: 991px) {
-}
-
 @media (max-width: 767px) {
   .project-card {
     width: 15rem;
