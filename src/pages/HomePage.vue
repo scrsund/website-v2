@@ -130,7 +130,7 @@ export default {
 }
 
 /*RESPONSIVE DESIGN*/
-@media (max-width: 1280px) {
+@media (max-width: 1200px) {
   .content-wrapper {
     margin: 0;
   }
@@ -143,8 +143,10 @@ export default {
   }
 }
 
-@media (max-width: 786px) {
+@media (max-width: 767px) {
   .content-wrapper {
+    flex-direction: column;
+    align-items: center;
     margin: 0;
     margin-right: 3rem;
   }
@@ -152,8 +154,6 @@ export default {
 
 @media (max-width: 575px) {
   .content-wrapper {
-    flex-direction: column;
-    align-items: center;
     margin: 0;
   }
 

@@ -152,7 +152,7 @@ ul {
   transition-delay: 0.03s;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1200px) {
   .hero-section {
     margin: 0;
     margin-left: 2rem;
@@ -168,29 +168,31 @@ ul {
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 767px) {
   .hero-section {
     margin: 0;
-    width: 100%;
     margin-left: 3rem;
   }
 
   .text-container {
     margin: 0;
+    margin-top: 3rem;
+    text-align: center;
   }
 
-  .title {
-    font-size: 1.4rem;
+  button {
+    margin: 1rem 0;
   }
 
   .tech-stack {
     margin-top: 1.5rem;
     font-size: 1rem;
     margin-bottom: 2rem;
+    align-items: center;
   }
 
   .icon-list {
-    gap: 0.2rem;
+    gap: 0.3rem;
   }
 }
 
@@ -202,35 +204,13 @@ ul {
   }
 
   .text-container {
-    width: 20rem;
-  }
-
-  .text-container {
-    margin: 0;
-    margin-top: 3rem;
-    text-align: center;
-  }
-
-  button {
-    margin-top: 1rem;
-  }
-
-  .title {
-    font-size: 1.6rem;
+    width: 95%;
   }
 
   .tech-stack {
     align-items: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
-  }
-
-  .call-to-action {
-    padding: 0.5rem;
-  }
-
-  .icon-list {
-    gap: 0.3rem;
   }
 }
 </style>

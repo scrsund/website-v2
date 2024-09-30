@@ -201,7 +201,7 @@ a:hover {
   border-color: var(--clr-4);
 }*/
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .project-card {
     width: 18rem;
   }
@@ -223,7 +223,14 @@ a:hover {
   }
 }
 
-@media (max-width: 786px) {
+@media (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+  .project-card {
+    width: 15rem;
+  }
+
   .project-wrapper {
     gap: 2rem;
   }

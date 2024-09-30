@@ -54,14 +54,14 @@ header {
   width: 83%;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1200px) {
   .right-menu a {
     padding-left: 0.7rem;
     padding-right: 0;
   }
 }
 
-@media (max-width: 786px) {
+@media (max-width: 767px) {
   header {
     margin: 0.5rem 0.7rem;
     padding: 1rem;

@@ -78,7 +78,7 @@ i:hover {
   }
 }
 
-@media (max-width: 786px) {
+@media (max-width: 767px) {
   .container {
     margin: 0;
   }
