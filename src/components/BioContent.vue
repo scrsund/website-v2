@@ -204,7 +204,7 @@ ul {
   }
 
   .text-container {
-    width: 95%;
+    width: 80%;
   }
 
   .tech-stack {
