@@ -201,6 +201,12 @@ a:hover {
   }
 }
 
+@media(max-width: 786px){
+  .project-wrapper{
+    gap: 2rem;
+  }
+}
+
 @media(max-width: 480px){
 
   .project-wrapper{

@@ -27,6 +27,7 @@ header {
 
 .right-menu {
   display: flex;
+  justify-content: flex-end;
 }
 
 .right-menu a {
@@ -51,6 +52,20 @@ header {
 
 .right-menu a:hover::after {
   width: 83%;
+}
+
+@media(max-width: 1280px){
+  .right-menu a{
+    padding-left: .7rem;
+    padding-right: 0;
+  }
+}
+
+@media(max-width: 786px){
+  header {
+    margin: .5rem .7rem;
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 480px){

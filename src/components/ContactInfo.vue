@@ -60,6 +60,12 @@ i:hover{
   }
 }
 
+@media(max-width: 786px){
+  .container{
+    margin: 0;
+  }
+}
+
 @media(max-width: 480px){
   .container{
     margin: 0;

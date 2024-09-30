@@ -57,7 +57,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
   margin-bottom: 2rem;
   margin-left: 5rem;
 }
@@ -131,13 +130,23 @@ export default {
 }
 
 /*RESPONSIVE DESIGN*/
-@media(max-width: 1000px){
+@media(max-width: 1280px){
+  .content-wrapper{
+    margin: 0;
+  }
   .arrow-container{
     margin-top: 5rem;
   }
 
   .portfolio-content{
     margin-top: 1rem;
+  }
+}
+
+@media(max-width:786px){
+  .content-wrapper{
+    margin: 0;
+    margin-right: 3rem;
   }
 }
 
@@ -150,7 +159,6 @@ export default {
   
   .box {
     margin: 0;
-
   }
 
   .arrow-container{

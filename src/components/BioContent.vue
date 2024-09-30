@@ -56,7 +56,6 @@ export default {
 }
 
 .title .creative-text {
-  /*background-image: linear-gradient(43deg, var(--clr-ntr-1), var(--clr-7));*/
   background-image: linear-gradient(43deg, var(--clr-c4), var(--clr-c1), var(--clr-a1), var(--clr-a2), var(--clr-a3), var(--clr-a4), var(--clr-ntr-1));
   -webkit-background-clip: text;
   color: transparent;
@@ -131,10 +130,11 @@ ul {
   transition-delay: .03s
 }
 
-@media(max-width: 1000px){
-  .text-container{
-    margin-top: 2rem;
-    width: 20rem;
+@media(max-width: 1280px){
+  .hero-section{
+    margin: 0;
+    margin-left: 2rem;
+    width: 28rem;
   }
 
   .icon-title i{
@@ -146,11 +146,41 @@ ul {
   }
 }
 
+@media(max-width: 780px){
+.hero-section{
+  margin: 0;
+  width: 100%;
+  margin-left: 3rem;
+}
+
+.text-container{
+  margin: 0;
+}
+
+.title{
+  font-size: 1.4rem;
+}
+
+.tech-stack {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.icon-list{
+  gap: .2rem;
+}
+}
+
 @media(max-width: 480px){
   .hero-section{
     align-items: center;
     margin: 0;
     width: 25rem;
+  }
+
+  .text-container{
+    width: 20rem;
   }
 
   .text-container{
@@ -161,6 +191,10 @@ ul {
 
   button{
     margin-top: 1rem;
+  }
+
+  .title{
+    font-size: 1.6rem;
   }
 
   .tech-stack {
