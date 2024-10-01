@@ -74,9 +74,14 @@ header {
     padding: 1rem;
   }
 
+  .logo{
+    font-size: 15px;
+  }
+
   .right-menu a {
-    padding-left: 0.7rem;
+    padding-left: 0.5rem;
     padding-right: 0;
+    font-size: .8rem;
   }
 }
 </style>
