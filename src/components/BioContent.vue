@@ -51,7 +51,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 6rem;
+  margin-left: 3rem;
 }
 
 .text-container {
@@ -154,8 +154,6 @@ ul {
 
 @media (max-width: 1200px) {
   .hero-section {
-    margin: 0;
-    margin-left: 4rem;
     width: 28rem;
   }
 
@@ -170,8 +168,7 @@ ul {
 
 @media (max-width: 991px){
   .hero-section{
-    margin-left: 2rem;
-    width: 25rem;
+    width: 24rem;
   }
 }
 

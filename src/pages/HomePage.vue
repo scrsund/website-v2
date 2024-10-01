@@ -58,7 +58,7 @@ export default {
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 2rem;
-  margin-left: 5rem;
+  margin-left: 7rem;
 }
 
 .box {
@@ -131,15 +131,22 @@ export default {
 
 /*RESPONSIVE DESIGN*/
 @media (max-width: 1200px) {
-  .content-wrapper {
-    margin: 0;
+  .content-wrapper{
+    margin-left: 4.5rem;
   }
+
   .arrow-container {
     margin-top: 5rem;
   }
 
   .portfolio-content {
     margin-top: 1rem;
+  }
+}
+
+@media(max-width: 991px){
+  .content-wrapper{
+    margin-left: 2rem;
   }
 }
 
