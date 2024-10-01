@@ -157,6 +157,10 @@ export default {
     margin: 0;
     margin-right: 3rem;
   }
+
+  .box{
+    margin-right: 1rem;
+  }
 }
 
 @media (max-width: 575px) {
@@ -166,6 +170,7 @@ export default {
 
   .box {
     margin: 0;
+    margin-right: 1rem;
   }
 
   .arrow-container {
