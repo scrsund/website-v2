@@ -170,7 +170,7 @@ export default {
 
   .box {
     margin: 0;
-    margin-right: 1rem;
+    margin-right: .5rem;
   }
 
   .arrow-container {
