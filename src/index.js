@@ -4,16 +4,6 @@ const store = createStore({
   state() {
     return {
       icons:{
-        html: {
-          name:"HTML",
-          code: 'fa-brands fa-html5',
-          svg: '',
-        },
-        css: {
-          name:"CSS",
-          code: 'fa-brands fa-css3-alt',
-          svg: '',
-        },
         js: {
           name:"JavaScript",
           code: 'fa-brands fa-js',
