@@ -6,39 +6,53 @@ const store = createStore({
       icons:{
         html: {
           name:"HTML",
-          code: 'fa-brands fa-html5'
+          code: 'fa-brands fa-html5',
+          svg: '',
         },
         css: {
           name:"CSS",
-          code: 'fa-brands fa-css3-alt'
+          code: 'fa-brands fa-css3-alt',
+          svg: '',
         },
         js: {
           name:"JavaScript",
-          code: 'fa-brands fa-js'
+          code: 'fa-brands fa-js',
+          svg: '/icons/javascript.svg',
         },
         vue: {
           name:"Vue.js",
-          code: 'fa-brands fa-vuejs'
+          code: 'fa-brands fa-vuejs',
+          svg: '/icons/vue.svg',
+        },
+        tailwind: {
+          name: "Tailwind",
+          code: "",
+          svg: "/icons/tailwind.svg",
         },
         figma: {
           name:"Figma",
-          code: 'fa-brands fa-figma'
+          code: 'fa-brands fa-figma',
+          svg: '/icons/figma.svg',
         },
         git: {
           name:"Git",
-          code: 'fa-brands fa-git'
+          code: 'fa-brands fa-git',
+          svg: '/icons/git.svg',
         },
         express: {
           name:"Express.js",
-          code: 'fa-brands fa-node-js'
+          code: 'fa-brands fa-node-js',
+          svg: '/icons/express.svg',
         },
         python: {
           name:"Python",
-          code: 'fa-brands fa-python'
+          code: 'fa-brands fa-python',
+          svg: '/icons/python.svg',
         },
         sql: {
           name:"SQL",
-          code: 'fa-solid fa-database'
+          code: 'fa-solid fa-database',
+          svg: '/icons/sql.svg',
         },
       },
       projects: [{
@@ -49,11 +63,11 @@ const store = createStore({
         gitHubLink: 'https://github.com/scrsund/scr-website',
       },
       {
-        title: 'Recipe App',
-        icons: ["html", "css", "vue"],
-        description: 'The Recipe App was the first Vue.js project I did on my own. Through inspiration from a project in the Udemy Course I was taking, I wanted to challenge my understanding of Vue.js by creating something simple to understand but had more complexity.<br><br>The app demonstrates knowledge in reusable components, state management, component communication patterns (such as props, provide/inject, slots, etc), and CSS scoped styling.',
-        demoLink: 'https://recipe-app-ten-gamma.vercel.app',
-        gitHubLink: 'https://github.com/scrsund/recipe-app',
+        title: 'E-commerce Website',
+        icons: ["vue", "git", "tailwind"],
+        description: 'A minimalistic e-commerce website built using Vuex, Vue Router, and Tailwind CSS. I developed this project to enhance my understanding of modular architecture and responsive design while crafting a modern, stylish user interface.<br><br>The website features dynamic product listings, a functional shopping cart, and smooth UI interactions. It showcases my ability to build scalable and maintainable front-end architectures, manage state with Vuex, and create highly responsive designs using Tailwind CSS.',
+        demoLink: 'https://ecom-website-flame.vercel.app',
+        gitHubLink: 'https://github.com/scrsund/ecom-website',
       },
       {
         title: 'Trading Journal<br><i style="font-size: small; color: var(--clr-p2)">in development</i>',
@@ -68,13 +82,24 @@ const store = createStore({
         description: 'Turtle Cross is an interactive game that I developed using python and its native Turtle graphics module. The game features multiple levels of increasing difficulty, where players must navigate through obstacles while tracking their progress on a scoreboard. <br><br>I created the game using Object-Oriented Programming (OOP), implementing modular and scalable classes for each game element, ensuring that future enhancements can be easily made.',
         demoLink: '',
         gitHubLink: 'https://github.com/scrsund/turtle-cross',
-      }
+      },
+      // {
+      //   title: 'Recipe App',
+      //   icons: ["html", "css", "vue"],
+      //   description: 'The Recipe App was the first Vue.js project I did on my own. Through inspiration from a project in the Udemy Course I was taking, I wanted to challenge my understanding of Vue.js by creating something simple to understand but had more complexity.<br><br>The app demonstrates knowledge in reusable components, state management, component communication patterns (such as props, provide/inject, slots, etc), and CSS scoped styling.',
+      //   demoLink: 'https://recipe-app-ten-gamma.vercel.app',
+      //   gitHubLink: 'https://github.com/scrsund/recipe-app',
+      // },
     ],
     };
   },
   getters: {
     getProjectIcons: (state) => (project) => {
-      return project.icons.map(iconKey => state.icons[iconKey]['code'])
+      return project.icons.map(iconKey => {
+        const icon = state.icons[iconKey];
+        return {code: icon.code, svg: icon.svg}
+
+      })
     }
   }
 });

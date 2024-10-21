@@ -12,11 +12,12 @@
         <div class="project-header">
           <h2 v-html="project.title"></h2>
           <div class="icon-list">
-            <i
-              v-for="icon in getProjectIcons(project)"
-              :key="icon"
-              :class="icon"
-            ></i>
+            <div v-for="icon in getProjectIcons(project)" :key="icon">
+              <i v-if="icon.code"
+                :class="icon.code"
+              ></i>
+              <img v-else :src="icon.svg" alt="" class="svg">
+            </div>
           </div>
         </div>
         <hr />
@@ -141,6 +142,12 @@ export default {
 
 .project-header h2 {
   margin: 0;
+}
+
+.svg {
+  width: 20px;
+  height: 20px;
+  transform: scale(0.9);
 }
 
 i {

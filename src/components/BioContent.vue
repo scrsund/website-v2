@@ -23,7 +23,8 @@
     <div class="tech-stack">
       <ul class="icon-list">
         <li class="icon-container" v-for="icon in icons" :key="icon">
-          <i :class="icon.code"></i>
+          <i v-if="icon.code" :class="icon.code"></i>
+          <img v-else :src="icon.svg" class="svg">
           <h3>{{ icon.name }}</h3>
         </li>
       </ul>
@@ -116,6 +117,18 @@ export default {
 ul {
   padding: 0;
   margin: 0;
+}
+
+.svg {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+  background-image: url('../../public/icons/tailwind.svg');
+  background-size: cover;
+}
+
+.svg:hover {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(100%) saturate(1000%) hue-rotate(1deg) brightness(100%) contrast(90%);
 }
 
 .icon-list {
