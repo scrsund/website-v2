@@ -58,6 +58,7 @@ export default {
 .text-container {
   font-family: "Roboto", sans-serif;
   text-align: left;
+  font-weight: 600;
 }
 
 .title {

@@ -5,14 +5,10 @@ module.exports = {
   darkMode: ["class"],
   safelist: ["dark"],
   prefix: "",
-  
   content: [
-    './pages/**/*.{js,jsx,vue}',
-    './components/**/*.{js,jsx,vue}',
-    './app/**/*.{js,jsx,vue}',
-    './src/**/*.{js,jsx,vue}',
-	],
-  
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -23,6 +19,26 @@ module.exports = {
     },
     extend: {
       colors: {
+        'clr-1': 'rgb(21, 21, 21)',
+        'clr-2': 'black',
+        'clr-3': '#0e4b50',
+        'clr-4': '#2d8f85',
+        'clr-5': '#637c54',
+        'clr-6': '#3c3b3f',
+        'clr-7': '#6a6666',
+        'ntr-1': '#d2b48c',
+        'ntr-2': '#fffff0',
+        'clr-c1': '#ffdb58',
+        'clr-c2': '#cc5500',
+        'clr-c3': '#e17b34',
+        'clr-c4': '#e97451',
+        'clr-a1': '#98ff98',
+        'clr-a2': '#e0ffff',
+        'clr-a3': '#967bb6',
+        'clr-a4': '#d8bfd8',
+        'clr-p1': '#4eb8a8',
+        'clr-p2': '#4db8a6',
+        'clr-p3': '#13777e',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -89,5 +105,8 @@ module.exports = {
       },
     },
   },
-  plugins: [animate],
+  plugins: [
+    require("tailwindcss-animate"),
+    animate
+  ],
 }

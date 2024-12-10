@@ -1,14 +1,29 @@
 <template>
   <header>
-    <router-link link to="/home" class="logo">sarahsund</router-link>
-    <nav class="right-menu">
-      <router-link to="/home#projects">Projects</router-link>
-      <router-link to="/home#contact">Contact</router-link>
+    <nav class="flex justify-between items-center m-8">
+      <router-link link to="/home" class="text-lg">sarahsund</router-link>
+      <HamburgerMenu 
+      />
+      <div class="space-x-4 hidden md:block">
+        <router-link to="/home#projects">Projects</router-link>
+          <router-link to="/home#contact">Contact</router-link>
+      </div>
     </nav>
   </header>
 </template>
 
-<style scoped>
+<script>
+import HamburgerMenu from '@/components/UI/HamburgerMenu.vue'
+
+  export default {
+    components: {
+      HamburgerMenu,
+    },
+  }
+</script>
+
+<!-- <style scoped>
+
 header {
   margin: 1rem 4rem;
   display: flex;
@@ -24,6 +39,7 @@ header {
   cursor: pointer;
   text-decoration: none;
 }
+
 
 .right-menu {
   display: flex;
@@ -84,4 +100,4 @@ header {
     font-size: 0.8rem;
   }
 }
-</style>
+</style> -->
