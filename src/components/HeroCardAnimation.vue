@@ -90,7 +90,7 @@ export default {
   height: 97%;
   object-fit: cover;
   object-position: 0% 20%;
-  border-radius: inherit;
+  border-radius: 3rem;
 }
 
 .frontside,
@@ -108,6 +108,15 @@ export default {
 .backside {
   transform: rotateY(180deg);
 }
+
+a {
+  text-decoration: none;
+  font-size: 28px;
+  color: whitesmoke;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+
 /*ORIGINAL STYLING*/
 /*@keyframes slideOut1 {
   0% {
@@ -354,22 +363,8 @@ i {
   animation: slideIn7 1s ease forwards;
 }
 */
-.box {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
 
-.box a {
-  text-decoration: none;
-  padding: 0.5rem;
-  font-size: 32px;
-  color: whitesmoke;
-  font-weight: 700;
-  font-family: "Raleway", sans-serif;
-}
+/*
 
 @media (max-width: 1000px) {
   .container {
@@ -392,45 +387,5 @@ i {
   .subtitle {
     text-align: center;
   }
-}
-
-@media (max-width: 575px) {
-  main {
-    overflow-x: hidden;
-  }
-  .container {
-    display: grid;
-  }
-
-  .box {
-    margin-bottom: 0;
-  }
-
-  .text-container {
-    text-align: center;
-    margin-top: 3rem;
-  }
-
-  .title {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-    margin-right: 1rem;
-  }
-
-  i {
-    display: none;
-  }
-
-  .box a {
-    font-size: 28px;
-  }
-
-  .backside img {
-    border-radius: 3rem;
-  }
-}
+}*/
 </style>

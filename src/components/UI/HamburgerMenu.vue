@@ -5,7 +5,7 @@
       <span class="hamburger-middle"></span>
       <span class="hamburger-bottom"></span>
     </div>
-    <div v-show="isOpen" class="h-screen absolute top-0 right-0 left-0 z-50 bg-clr-1 opacity-90">
+    <div v-show="isOpen" class="h-screen absolute top-0 right-0 left-0 z-50 bg-clr-1 opacity-90 md:hidden">
       <div class="flex justify-between items-center m-8">
         <router-link link to="/home" class="text-lg">sarahsund</router-link>
         <div @click="toggleButton" :class="['hamburger md:hidden', {'open' : isOpen}]">

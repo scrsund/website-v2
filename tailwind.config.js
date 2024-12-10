@@ -18,6 +18,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        raleway: ['Raleway', 'sans-serif'],
+      },
       colors: {
         'clr-1': 'rgb(21, 21, 21)',
         'clr-2': 'black',

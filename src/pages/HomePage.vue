@@ -1,48 +1,36 @@
 <template>
   <main>
-    <section class="container">
-      <div class="content-wrapper">
-        <section class="box">
-          <HoverCardAnimation />
-        </section>
-        <section class="bio">
-          <BioContent />
-        </section>
-      </div>
-      <div class="arrow-container">
-        <span class="arrow"></span>
-        <span class="arrow"></span>
-      </div>
-    </section>
-    <section id="projects" class="portfolio-content">
-      <PortfolioContent />
-    </section>
-    <section class="contact" id="contact">
-      <ContactInfo />
-    </section>
+    <HeroSection />
+    <!-- <div class="arrow-container">
+      <span class="arrow"></span>
+      <span class="arrow"></span>
+    </div> -->
+    <!-- <PortfolioContent /> -->
+    <ContactInfo />
   </main>
 </template>
 
 <script>
-import HoverCardAnimation from "../components/HoverCardAnimation.vue";
-import BioContent from "../components/BioContent.vue";
-import PortfolioContent from "../components/PortfolioContent.vue";
+// import HeroCardAnimation from "../components/HoverCardAnimation.vue";
+import HeroSection from "../components/HeroSection.vue";
+// import PortfolioContent from "../components/PortfolioContent.vue";
 import ContactInfo from "../components/ContactInfo.vue";
 
 export default {
   components: {
-    HoverCardAnimation,
-    BioContent,
-    PortfolioContent,
+    // HeroCardAnimation,
+    HeroSection,
+    // PortfolioContent,
     ContactInfo,
   },
 };
 </script>
 
 <style scoped>
-.container {
+
+/*
+.hero-container {
   width: 100%;
-  min-height: 74vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,36 +39,10 @@ export default {
   z-index: 0;
   padding: 2rem 0;
   margin-top: 5rem;
-}
-
-.content-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin-bottom: 2rem;
-  margin-left: 7rem;
-}
-
-.box {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  margin-left: 4rem;
-  margin-top: 0.6rem;
-}
-
-.box a {
-  text-decoration: none;
-  padding: 0.5rem;
-  font-size: 32px;
-  color: var(--clr-ntr-2);
-  font-weight: 700;
-  font-family: "Raleway", sans-serif;
-}
+}*/
 
 /*ARROW STYLING*/
+/*
 .arrow-container {
   display: flex;
   justify-content: center;
@@ -130,6 +92,7 @@ export default {
 }
 
 /*RESPONSIVE DESIGN*/
+/*
 @media (max-width: 1200px) {
   .content-wrapper{
     margin-left: 4.5rem;
@@ -176,5 +139,5 @@ export default {
   .arrow-container {
     margin-top: 2rem;
   }
-}
+}*/
 </style>

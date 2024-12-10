@@ -1,52 +1,87 @@
 <template>
-  <section class="hero-section">
-    <div class="text-container">
-      <h2 class="title">
-        Need someone to bring
-        <span class="creative-text">creative ideas</span> to life?
-        <span class="description"
-          >With a passion for pushing the envelope and gaining new skills along
-          the way, I might be the
-          <span class="frontend">Front-End Developer</span> you're looking for!
-          I'm all about the details and I thrive on learning whatever's
-          necessary to get the job done. I even know a little bit of back-end
-          too!</span
+  <section>
+    <div
+      class="relative z-0 flex flex-col justify-center items-center mt-20 space-y-10 md:mt-14 md:flex-row md:space-x-6 md:mx-14"
+    >
+      <div>
+        <HeroCardAnimation />
+      </div>
+      <div>
+        <div
+          class="flex flex-col p-5 text-center font-raleway font-semibold max-w-lg md:mb-4"
         >
-      </h2>
-      <BaseButton>
-        <router-link to="/home#contact" class="button-link"
-          >Let's connect!</router-link
-        >
-      </BaseButton>
-      <!-- <h3 class="call-to-action">Let's build something together!</h3> -->
+          <h2 class="text-2xl">
+            Need someone to bring
+            <span class="creative">creative ideas</span> to life?
+            <span class="font-poppins text-xs"
+              >With a passion for pushing the envelope and gaining new skills
+              along the way, I might be the
+              <span class="text-clr-p1">Front-End Developer</span> you're
+              looking for! I'm all about the details and I thrive on learning
+              whatever's necessary to get the job done. I even know a little bit
+              of back-end too!</span
+            >
+          </h2>
+          <button
+            class="items-center w-1/2 py-2 mx-auto mt-10 md:mt-8 lg:mt-10"
+          >
+            <router-link to="/home#contact" class="text-sm"
+              >Let's connect</router-link
+            >
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="tech-stack">
-      <ul class="icon-list">
-        <li class="icon-container" v-for="icon in icons" :key="icon">
-          <i v-if="icon.code" :class="icon.code"></i>
-          <img v-else :src="icon.svg" class="svg">
-          <h3>{{ icon.name }}</h3>
-        </li>
-      </ul>
+    <div class="arrow-container">
+      <span class="arrow"></span>
+      <span class="arrow"></span>
     </div>
+    <!-- <div class="tech-stack">
+        <ul class="icon-list">
+          <li class="icon-container" v-for="icon in icons" :key="icon">
+            <i v-if="icon.code" :class="icon.code"></i>
+            <img v-else :src="icon.svg" class="svg">
+            <h3>{{ icon.name }}</h3>
+          </li>
+        </ul>
+      </div> -->
   </section>
 </template>
 
 <script>
 import { mapState } from "vuex";
-import BaseButton from "./UI/BaseButton.vue";
+import HeroCardAnimation from "./HeroCardAnimation.vue";
 
 export default {
   computed: {
     ...mapState(["icons"]),
   },
   components: {
-    BaseButton,
+    HeroCardAnimation,
   },
 };
 </script>
 
 <style scoped>
+/*.box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 4rem;
+  margin-top: 0.6rem;
+}
+
+.box a {
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 32px;
+  color: var(--clr-ntr-2);
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+
 .hero-section {
   width: 30rem;
   display: flex;
@@ -115,6 +150,7 @@ export default {
   font-size: 1rem;
 }*/
 
+/*
 ul {
   padding: 0;
   margin: 0;
@@ -166,6 +202,9 @@ ul {
   transition-delay: 0.03s;
 }
 
+*/
+
+/*
 @media (max-width: 1200px) {
   .hero-section {
     width: 28rem;
@@ -231,4 +270,5 @@ ul {
     margin-bottom: 3rem;
   }
 }
+*/
 </style>

@@ -9,10 +9,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 18rem;
-  width: 18rem;
+  height: 15rem;
+  width: 15rem;
   background: var(--clr-2);
-  border-radius: 4.5rem;
+  border-radius: 3rem;
   position: relative;
 }
 
@@ -62,15 +62,6 @@
   }
   100% {
     --gradient-angle: 360deg;
-  }
-}
-
-@media (max-width: 575px) {
-  .card {
-    height: 15rem;
-    width: 15rem;
-    border-radius: 3rem;
-    margin-left: 1rem;
   }
 }
 </style>

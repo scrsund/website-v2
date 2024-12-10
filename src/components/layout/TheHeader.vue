@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="flex justify-between items-center m-8">
+    <nav class="flex justify-between items-center m-8 lg:mx-16 xl:mx-24">
       <router-link link to="/home" class="text-lg">sarahsund</router-link>
       <HamburgerMenu 
       />
