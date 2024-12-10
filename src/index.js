@@ -10,9 +10,19 @@ const store = createStore({
           svg: '/icons/javascript.svg',
         },
         vue: {
-          name:"Vue.js",
+          name:"Vue",
           code: 'fa-brands fa-vuejs',
           svg: '/icons/vue.svg',
+        },
+        react: {
+          name:"React",
+          code: "fa-brands fa-react",
+          svg:""
+        },
+        svelte: {
+          name:"Svelte",
+          code: "fa-brands fa-s",
+          svg:""
         },
         tailwind: {
           name: "Tailwind",
@@ -44,6 +54,11 @@ const store = createStore({
           code: 'fa-solid fa-database',
           svg: '/icons/sql.svg',
         },
+        AI: {
+          name: "AI",
+          code: 'fa-solid fa-brain',
+          svg: "",
+        }
       },
       projects: [{
         title: 'Website V1',
