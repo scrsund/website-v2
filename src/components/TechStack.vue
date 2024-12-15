@@ -1,13 +1,11 @@
 <template>
-  <div class="tech-stack">
-    <ul class="icon-list">
+    <ul class="grid grid-cols-6 gap-2 sm:flex">
       <li class="icon-container" v-for="icon in icons" :key="icon">
         <i v-if="icon.code" :class="icon.code"></i>
         <img v-else :src="icon.svg" class="svg">
         <h3>{{ icon.name }}</h3>
       </li>
     </ul>
-  </div>
 </template>
 
 <script>
@@ -21,18 +19,6 @@ export default {
 </script>
 
 <style scoped>
-.tech-stack {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  margin-top: 1.5rem;
-}
-
-.subheading {
-  font-size: 1rem;
-}
-
 .svg {
   width: 32px;
   height: 32px;
@@ -45,14 +31,7 @@ export default {
   filter: brightness(0) saturate(100%) invert(75%) sepia(100%) saturate(1000%) hue-rotate(1deg) brightness(100%) contrast(90%);
 }
 
-.icon-list {
-  display: flex;
-  gap: 0.5rem;
-}
-
 .icon-container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center;
 }
