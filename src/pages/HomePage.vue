@@ -3,7 +3,7 @@
     <HeroSection />
     <!-- <PortfolioContent /> -->
      <ProjectSection/>
-    <ContactInfo />
+    <!-- <ContactInfo /> -->
   </main>
 </template>
 

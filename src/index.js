@@ -4,6 +4,16 @@ const store = createStore({
   state() {
     return {
       icons:{
+        html: {
+          name: 'HTML',
+          code: 'fa-brands fa-html5',
+          svg: '',
+        },
+        css: {
+          name: 'CSS',
+          code: 'fa-brands fa-css3-alt',
+          svg: ''
+        },
         js: {
           name:"JavaScript",
           code: 'fa-brands fa-js',
@@ -19,11 +29,11 @@ const store = createStore({
           code: "fa-brands fa-react",
           svg:""
         },
-        svelte: {
-          name:"Svelte",
-          code: "fa-brands fa-s",
-          svg:""
-        },
+        // svelte: {
+        //   name:"Svelte",
+        //   code: "fa-brands fa-s",
+        //   svg:""
+        // },
         tailwind: {
           name: "Tailwind",
           code: "",
@@ -40,7 +50,7 @@ const store = createStore({
           svg: '/icons/git.svg',
         },
         express: {
-          name:"Express.js",
+          name:"Express",
           code: 'fa-brands fa-node-js',
           svg: '/icons/express.svg',
         },
@@ -49,8 +59,8 @@ const store = createStore({
           code: 'fa-brands fa-python',
           svg: '/icons/python.svg',
         },
-        sql: {
-          name:"SQL",
+        database: {
+          name:"Database",
           code: 'fa-solid fa-database',
           svg: '/icons/sql.svg',
         },
@@ -73,6 +83,7 @@ const store = createStore({
         description: 'A minimalistic e-commerce website built using Vuex, Vue Router, and Tailwind CSS. I developed this project to enhance my understanding of modular architecture and responsive design while crafting a modern, stylish user interface.<br><br>The website features dynamic product listings, a functional shopping cart, and smooth UI interactions. It showcases my ability to build scalable and maintainable front-end architectures, manage state with Vuex, and create highly responsive designs using Tailwind CSS.',
         demoLink: 'https://ecom-website-flame.vercel.app',
         gitHubLink: 'https://github.com/scrsund/ecom-website',
+        img: '/screenshots/ecommerce.png',
       },
       {
         title: 'Trading Journal<br><i style="font-size: small; color: var(--clr-p2)">in development</i>',

@@ -26,7 +26,7 @@
             class="items-center w-1/2 py-2 mx-auto mt-10 md:mt-8 lg:mt-10"
           >
             <router-link to="/home#contact" class="text-sm tracking-wider"
-              >Let's Connect</router-link
+              >Check Out My Resume</router-link
             >
           </button>
         </div>
