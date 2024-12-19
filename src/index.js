@@ -72,7 +72,7 @@ const store = createStore({
       },
       projects: [{
         title: 'Website V1',
-        icons: ["vue", "express", "sql", "git"],
+        icons: ["vue", "express", "database", "git"],
         description: "Website V1 was the first iteration of this website. I put a bigger emphasis on features and functionality, but decided that a simplistic design would be better for a portfolio appeal, which led me to create V2. <br><br>The main difference between the two websites is the customization of Vue-Router, Vuex, media queries, and unique components to better suit each website's design. A contact form using Express.js, PostgreSQL, and Supabase was also implemented in V1.",
         demoLink: 'https://my-website-ten-jet-20.vercel.app/home',
         gitHubLink: 'https://github.com/scrsund/scr-website',
@@ -87,7 +87,7 @@ const store = createStore({
       },
       {
         title: 'Trading Journal<br><i style="font-size: small; color: var(--clr-p2)">in development</i>',
-        icons: ["vue", "express", "sql", "git", "figma"],
+        icons: ["vue", "express", "database", "git", "figma"],
         description: 'This project is a passion project. I wanted to create something to help day traders with their psychological hang ups and make it easier to stick to their strategies. It will have features such as reminders, current trades, trade history, predictions, statistics and more.<br><br>It will be the biggest project I have done to-date, and I will be finding ways to broaden my skill set as well as continuing to implement Vue-Router, Vuex, PostgreSQL, and Express.js.',
         demoLink: 'https://trading-journal-iota.vercel.app/dashboard',
         gitHubLink: 'https://github.com/scrsund/trading-journal',
@@ -111,11 +111,16 @@ const store = createStore({
   },
   getters: {
     getProjectIcons: (state) => (project) => {
+      if (!project || !project.icons) return []
       return project.icons.map(iconKey => {
-        const icon = state.icons[iconKey];
-        return {code: icon.code, svg: icon.svg}
-
-      })
+        const icon = state.icons[iconKey]
+        if (!icon) return null
+        return {
+          code: icon.code || '',
+          svg: icon.svg || '',
+          name: icon.name || ''
+        }
+      }).filter(Boolean)
     }
   }
 });
