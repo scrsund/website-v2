@@ -16,14 +16,14 @@
             <span class="font-poppins text-xs"
               >With a passion for pushing the envelope and gaining new skills
               along the way, I might be the
-              <span class="text-clr-p1">Front-End Developer</span> you're
+              <span class="text-clr-p1 font-raleway text-sm">Front-End Developer</span> you're
               looking for. I'm all about the details and I thrive on learning
               whatever's necessary to get the job done. I even know a little bit
               of back-end too!</span
             >
           </h2>
           <button
-            class="items-center w-1/2 py-2 mx-auto mt-10 md:mt-8 lg:mt-10"
+            class="items-center w-1/2 py-2 mx-auto mt-10 md:mt-8 lg:mt-10 base-button"
           >
             <router-link to="/home#contact" class="text-sm tracking-wider"
               >Check Out My Resume</router-link

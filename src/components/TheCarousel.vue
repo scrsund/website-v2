@@ -1,33 +1,44 @@
 <template>
-  <div class="carousel-container">
-    <button class="nav-button prev" @click="previous">
-      <i class="fas fa-chevron-left"></i>
-    </button>
-
-    <div class="carousel-content">
-      <slot :currentItem="items[currentIndex]"></slot>
-    </div>
-
-    <button class="nav-button next" @click="next">
-      <i class="fas fa-chevron-right"></i>
-    </button>
-
-    <div class="pagination">
-      <span
-        v-for="(_, index) in items"
-        :key="index"
-        :class="['dot', { active: currentIndex === index }]"
-        @click="goToIndex(index)"
-      ></span>
+  <div class="carousel-container bg-clr-2 rounded">
+    <div class="p-6">
+      <div class="flex flex-col">
+        <button class="nav-button prev base-button" @click="previous">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+    
+        <div class="carousel-content">
+          <slot :currentItem="items[currentIndex]"></slot>
+        </div>
+    
+        <button class="nav-button next base-button" @click="next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+    
+        <div class="pagination">
+          <span
+            v-for="(_, index) in items"
+            :key="index"
+            :class="['dot', { active: currentIndex === index }]"
+            @click="goToIndex(index)"
+          ></span>
+        </div>
+      </div>
+      <div class="flex justify-center items-center">
+        <!-- <TechStack /> -->
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import { ref, watch } from "vue";
+// import TechStack from "./TechStack.vue";
 
 export default {
   name: "TheCarousel",
+  components: {
+    // TechStack,
+  },
   props: {
     items: {
       type: Array,
@@ -91,6 +102,7 @@ export default {
   transition: opacity 0.3s;
   color: var(--clr-text);
   z-index: 1;
+  margin: 0 1rem;
 }
 
 .nav-button:hover {
@@ -116,12 +128,14 @@ export default {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--clr-p2);
+  background: var(--clr-ntr-2);
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .dot.active {
-  background: var(--clr-3);
+  background: var(--clr-7);
 }
 </style>
+
+<!-- clr-ntr-2 / clr-7 -->

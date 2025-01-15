@@ -21,7 +21,7 @@
 
 /* Base Button */
 
-button {
+.base-button {
   width: full;
   text-decoration: none;
   border-radius: .5rem;
@@ -33,7 +33,7 @@ button {
   transition: background .5s ease-in-out, box-shadow .5s ease-in-out;
   }
 
-button:hover {
+.base-button:hover {
   background: #4db8a6;
   box-shadow: 0 0 12px rgba(0, 208, 132, 0.5);
 }

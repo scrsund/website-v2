@@ -1,5 +1,5 @@
 <template>
-  <section class="h-screen flex flex-col items-center space-y-14">
+  <section class="h-screen flex flex-col items-center space-y-14 bg-clr-1">
     <h1 class="text-center text-2xl">My Projects</h1>
     <div class="lg:w-3/4 flex flex-col space-y-10 p-6">
       <TheCarousel 
@@ -11,23 +11,26 @@
             <div class="text-center">
               <h1 v-html="project.title"></h1>
             </div>
-            <div class="flex flex-col justify-center items-center lg:flex-row lg:gap-6 p-4">
-              <img 
-                v-if="project.img" 
-                :src="project.img" 
-                :alt="project.title" 
-                class="sm:w-5/6 md:w-2/3 lg:w-1/2 xl:w-5/12 2xl:w-1/3"
-              >
-              <div class="px-4 py-6 max-w-xl md:px-8 lg:px-0">
-                <p class="max-w-lg" v-html="project.description"></p>
-                <div class="flex justify-center items-center gap-8 mt-6">
-                  <button v-if="project.demoLink" class="w-20">
-                    <a :href="project.demoLink" target="_blank">Demo</a>
-                  </button>
-                  <button v-if="project.gitHubLink" class="w-20">
-                    <a :href="project.gitHubLink" target="_blank">GitHub</a>
-                  </button>
+            <div class="flex flex-col justify-center items-center p-4">
+              <div class="flex flex-col justify-center items-center xl:grid xl:grid-cols-2 xl:gap-5 xl:justify-start xl:items-start">
+                <img 
+                  v-if="project.img" 
+                  :src="project.img" 
+                  :alt="project.title" 
+                  class="my-auto w-3/4 xl:w-full"
+                  
+                >
+                <div class="px-4 py-6 max-w-xl text-center xl:text-left">
+                  <p class="max-w-lg" v-html="project.description"></p>
                 </div>
+              </div>
+              <div class="flex justify-center items-center gap-8 mt-6">
+                <button v-if="project.demoLink" class="w-20 base-button">
+                  <a :href="project.demoLink" target="_blank">Demo</a>
+                </button>
+                <button v-if="project.gitHubLink" class="w-20 base-button">
+                  <a :href="project.gitHubLink" target="_blank">GitHub</a>
+                </button>
               </div>
             </div>
           </div>
@@ -35,7 +38,11 @@
       </TheCarousel>
     </div>
     <div>
-      <TechStack :icons="currentProjectIcons"></TechStack>
+      <TechStack 
+        :key="currentIndex"
+        :current-project-icons="currentProjectIcons"
+        :current-index="currentIndex"
+      ></TechStack>
     </div>
   </section>
 </template>
@@ -59,11 +66,10 @@ export default {
     
     const currentProjectIcons = computed(() => {
       const currentProject = projects.value[currentIndex.value]
-      if (!currentProject || !currentProject.icons) return []
-      return currentProject.icons.map(iconKey => {
-        const icon = store.state.icons[iconKey]
-        return icon || null
-      }).filter(Boolean)
+      if (!currentProject?.icons) return []
+      return currentProject.icons
+        .map(iconKey => store.state.icons[iconKey])
+        .filter(Boolean)
     })
 
     return {
