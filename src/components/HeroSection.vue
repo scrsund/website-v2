@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="arrow-container md:mt-20">
+    <div class="arrow-container md:flex md:mt-20">
       <span class="arrow"></span>
       <span class="arrow"></span>
     </div>

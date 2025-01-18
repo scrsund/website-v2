@@ -95,7 +95,7 @@ background: linear-gradient(45deg, #00d084, #4db8a6);
 /* Arrow Styling */
 
 .arrow-container {
-  display: flex;
+  display: hidden;
   justify-content: center;
   align-items: center;
   width: 100%;
