@@ -59,9 +59,9 @@ export default {
 .svg {
   width: 32px;
   height: 32px;
+  margin: 0 auto;
   margin-bottom: 8px;
   background-size: cover;
-  margin-left: 7px;
   filter: brightness(0) saturate(100%) invert(42%) sepia(8%) saturate(173%) hue-rotate(314deg) brightness(94%) contrast(86%);
 }
 
