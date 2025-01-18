@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-24 pb-10 mx-8">
+  <section class="pb-10 mx-4 mt-10 sm:mx-8 sm:mt-24">
     <div class="p-6">
       <h1 class="title">Like what you see?</h1>
       <div class="wrapper">
