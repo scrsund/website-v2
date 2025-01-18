@@ -2,22 +2,22 @@
   <main>
     <HeroSection />
     <!-- <PortfolioContent /> -->
-     <ProjectSection/>
-    <!-- <ContactInfo /> -->
+     <ProjectSection id="projects"/>
+    <ContactInfo id="contact"/>
   </main>
 </template>
 
 <script>
 import HeroSection from "../components/HeroSection.vue";
 // import PortfolioContent from "../components/PortfolioContent.vue";
-// import ContactInfo from "../components/ContactInfo.vue";
+import ContactInfo from "../components/ContactInfo.vue";
 import ProjectSection from "@/components/ProjectSection.vue";
 
 export default {
   components: {
     HeroSection,
     // PortfolioContent,
-    // ContactInfo,
+    ContactInfo,
     ProjectSection
   },
 };

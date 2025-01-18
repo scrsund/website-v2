@@ -72,16 +72,16 @@ const store = createStore({
       },
       projects: [
         {
-          title: 'Mock Software - AI Idea Validator',
+          title: '1. Mock Software - AI Idea Validator',
           icons: ['react', 'tailwind', 'git', 'ai'],
           // typescript, next.js
           description: 'A sophisticated AI-powered platform designed to help entrepreneurs validate and analyze business ideas. Built with React, Next.js, TypeScript, and Tailwind CSS, this project demonstrates my ability to adapt to growing AI technologies. The platform features an intelligent analysis system that provides market insights, financial projections, and validation metrics through OpenAI API and SerpAPI integration. <br><br>Key technical achievements include implementing real-time market analysis, creating a modular dashboard system, and developing a sophisticated type system for business analytics. The project highlights my ability to build complex, data-driven applications while maintaining clean code architecture and delivering an intuitive user experience.',
-          demoLink: '',
+          demoLink: 'https://founder-ai.vercel.app/',
           gitHubLink: 'https://github.com/scrsund/founder-ai',
           img: '/screenshots/founder-ai.png'
         },
         {
-          title: 'Blog',
+          title: '2. Blog',
           icons: ['vue', 'tailwind', 'git', 'database','express'],
           description: 'A dynamic blog platform built with Vue.js, Express, and Contentful CMS, designed to serve as a comprehensive guide for expat families moving to Sweden. This project demonstrates my ability to create full-stack applications while integrating headless CMS solutions.<br><br>The application features both published and draft content workflows, dynamic routing, and a modular component structure. This project highlights my skills in building scalable web applications while maintaining clean code architecture and implementing modern development practices.',
           demoLink: 'https://expat-blog.vercel.app/home',
@@ -89,7 +89,7 @@ const store = createStore({
           img: '/screenshots/blog.png'
         },
         {
-          title: 'E-Commerce Website',
+          title: '3. E-Commerce Website',
           icons: ["vue", "git", "tailwind"],
           description: 'A minimalistic e-commerce website built using Vuex, Vue Router, and Tailwind CSS. I developed this project to enhance my understanding of modular architecture and responsive design while crafting a modern, stylish user interface.<br><br>The website features dynamic product listings, a functional shopping cart, and smooth UI interactions. It showcases my ability to build scalable and maintainable front-end architectures, manage state with Vuex, and create highly responsive designs using Tailwind CSS.',
           demoLink: 'https://ecom-website-flame.vercel.app',

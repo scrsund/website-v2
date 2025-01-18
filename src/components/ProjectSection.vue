@@ -1,5 +1,5 @@
 <template>
-  <section class="h-screen flex flex-col items-center space-y-14 bg-clr-1">
+  <section class="flex flex-col items-center">
     <h1 class="text-center text-2xl">My Projects</h1>
     <div class="lg:w-3/4 flex flex-col space-y-10 p-6">
       <TheCarousel 
@@ -18,7 +18,6 @@
                   :src="project.img" 
                   :alt="project.title" 
                   class="my-auto w-3/4 xl:w-full"
-                  
                 >
                 <div class="px-4 py-6 max-w-xl text-center xl:text-left">
                   <p class="max-w-lg" v-html="project.description"></p>
@@ -37,13 +36,6 @@
         </template>
       </TheCarousel>
     </div>
-    <div>
-      <TechStack 
-        :key="currentIndex"
-        :current-project-icons="currentProjectIcons"
-        :current-index="currentIndex"
-      ></TechStack>
-    </div>
   </section>
 </template>
 
@@ -51,31 +43,20 @@
 import { computed, ref } from 'vue'
 import { useStore } from 'vuex'
 import TheCarousel from './TheCarousel.vue'
-import TechStack from './TechStack.vue'
 
 export default {
   name: 'ProjectSection',
   components: {
-    TheCarousel,
-    TechStack
+    TheCarousel
   },
   setup() {
     const store = useStore()
     const currentIndex = ref(0)
     const projects = computed(() => store.state.projects)
-    
-    const currentProjectIcons = computed(() => {
-      const currentProject = projects.value[currentIndex.value]
-      if (!currentProject?.icons) return []
-      return currentProject.icons
-        .map(iconKey => store.state.icons[iconKey])
-        .filter(Boolean)
-    })
 
     return {
       projects,
-      currentIndex,
-      currentProjectIcons
+      currentIndex
     }
   }
 }

@@ -14,30 +14,29 @@
           <i class="fas fa-chevron-right"></i>
         </button>
     
-        <div class="pagination">
-          <span
-            v-for="(_, index) in items"
-            :key="index"
-            :class="['dot', { active: currentIndex === index }]"
-            @click="goToIndex(index)"
-          ></span>
-        </div>
+        <!-- <div class="pagination">
+          <span class="text-clr-7">{{ currentIndex + 1 }}/{{ items.length }}</span>
+        </div> -->
       </div>
-      <div class="flex justify-center items-center">
-        <!-- <TechStack /> -->
+      <div class="mt-8 flex justify-center">
+        <TechStack 
+          :current-project-icons="currentProjectIcons"
+          :current-index="currentIndex"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { ref, watch } from "vue";
-// import TechStack from "./TechStack.vue";
+import { ref, watch, computed } from "vue";
+import { useStore } from 'vuex';
+import TechStack from "./TechStack.vue";
 
 export default {
   name: "TheCarousel",
   components: {
-    // TechStack,
+    TechStack,
   },
   props: {
     items: {
@@ -47,7 +46,16 @@ export default {
   },
   emits: ["update:index"],
   setup(props, { emit }) {
+    const store = useStore();
     const currentIndex = ref(0);
+
+    const currentProjectIcons = computed(() => {
+      const currentProject = props.items[currentIndex.value];
+      if (!currentProject?.icons) return [];
+      return currentProject.icons
+        .map(iconKey => store.state.icons[iconKey])
+        .filter(Boolean);
+    });
 
     const next = () => {
       currentIndex.value = (currentIndex.value + 1) % props.items.length;
@@ -70,6 +78,7 @@ export default {
 
     return {
       currentIndex,
+      currentProjectIcons,
       next,
       previous,
       goToIndex,
@@ -120,21 +129,8 @@ export default {
 .pagination {
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
   margin-top: 1rem;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--clr-ntr-2);
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.dot.active {
-  background: var(--clr-7);
+  font-size: 1rem;
 }
 </style>
 

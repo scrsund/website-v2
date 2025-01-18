@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <section class="mt-20">
     <hr />
-    <div class="container">
+    <div class="p-6">
       <h1 class="title">Like what you see?</h1>
       <div class="wrapper">
         <p class="contents">
@@ -9,7 +9,7 @@
           or just want to chat— feel free to reach out. I'd love to hear from
           you!
         </p>
-        <p class="email">scr.sund@gmail.com ☀️</p>
+        <p class="email mb-4">scr.sund@gmail.com ☀️</p>
         <div class="icons">
           <a
             href="https://github.com/scrsund"
@@ -36,13 +36,6 @@
 </template>
 
 <style scoped>
-.container {
-  margin-left: 3rem;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  height: 18rem;
-}
-
 .wrapper p {
   padding: 0.2rem 0;
   font-family: "Poppins", sans-serif;
@@ -53,10 +46,6 @@
   font-size: 1.7rem;
   margin-bottom: 1.3rem;
   font-family: "Raleway", sans-serif;
-}
-
-.contents {
-  width: 35%;
 }
 
 i {
