@@ -16,8 +16,8 @@
             <span class="font-poppins text-xs"
               >With a passion for pushing the envelope and gaining new skills
               along the way, I might be the
-              <span class="text-clr-p1 font-raleway text-sm">Front-End Developer</span> you're
-              looking for. I'm all about the details and I thrive on learning
+              <span class="text-clr-p1 font-raleway text-sm">AI Front-End Developer</span>  you're
+              looking for. Though early in my career, I'm all about the details and I thrive on learning
               whatever's necessary to get the job done. I even know a little bit
               of back-end too!</span
             >
