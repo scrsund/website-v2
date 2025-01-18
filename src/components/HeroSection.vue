@@ -25,8 +25,8 @@
           <button
             class="items-center w-1/2 py-2 mx-auto mt-10 md:mt-8 lg:mt-10 base-button"
           >
-            <router-link to="/home#contact" class="text-sm tracking-wider"
-              >Check Out My Resume</router-link
+            <a href="/TechCV.pdf" target="_blank" rel="noopener noreferrer" class="text-sm tracking-wider"
+              >Check Out My Resume</a
             >
           </button>
         </div>
