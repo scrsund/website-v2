@@ -61,10 +61,13 @@ export default {
   height: 32px;
   margin-bottom: 8px;
   background-size: cover;
+  margin-left: 7px;
+  filter: brightness(0) saturate(100%) invert(42%) sepia(8%) saturate(173%) hue-rotate(314deg) brightness(94%) contrast(86%);
 }
 
 .svg:hover,
 .active .svg {
+  background-color: inherit;
   filter: brightness(0) saturate(100%) invert(75%) sepia(100%) saturate(1000%) hue-rotate(1deg) brightness(100%) contrast(90%);
 }
 

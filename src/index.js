@@ -54,6 +54,16 @@ const store = createStore({
           code: 'fa-brands fa-node-js',
           svg: '/icons/express.svg',
         },
+        next: {
+          name: "Next.js",
+          code: '',
+          svg: '/icons/next.svg'
+        },
+        typescript: {
+          name: 'TypeScript',
+          code: '',
+          svg: '/icons/typescript.svg'
+        },
         python: {
           name:"Python",
           code: 'fa-brands fa-python',
@@ -73,9 +83,9 @@ const store = createStore({
       projects: [
         {
           title: '1. Mock Software - AI Idea Validator',
-          icons: ['react', 'tailwind', 'git', 'ai'],
+          icons: ['react', 'tailwind', 'git', 'ai', 'next', 'typescript'],
           // typescript, next.js
-          description: 'A sophisticated AI-powered platform designed to help entrepreneurs validate and analyze business ideas. Built with React, Next.js, TypeScript, and Tailwind CSS, this project demonstrates my ability to adapt to growing AI technologies. The platform features an intelligent analysis system that provides market insights, financial projections, and validation metrics through OpenAI API and SerpAPI integration. <br><br>Key technical achievements include implementing real-time market analysis, creating a modular dashboard system, and developing a sophisticated type system for business analytics. The project highlights my ability to build complex, data-driven applications while maintaining clean code architecture and delivering an intuitive user experience.',
+          description: 'An AI-powered platform designed to help entrepreneurs validate and analyze business ideas. Built with React, Next.js, TypeScript, and Tailwind CSS, this project demonstrates my ability to adapt to growing AI technologies. The platform features an intelligent analysis system that provides market insights, financial projections, and validation metrics through OpenAI API and SerpAPI integration. <br><br>Key technical achievements include implementing real-time market analysis, creating a modular dashboard system, and developing a sophisticated type system for business analytics. The project highlights my ability to build complex, data-driven applications while delivering an intuitive user experience.',
           demoLink: 'https://founder-ai.vercel.app/',
           gitHubLink: 'https://github.com/scrsund/founder-ai',
           img: '/screenshots/founder-ai.png'

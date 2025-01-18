@@ -1,6 +1,5 @@
 <template>
-  <section class="mt-20">
-    <hr />
+  <section class="mt-24 pb-10 mx-8">
     <div class="p-6">
       <h1 class="title">Like what you see?</h1>
       <div class="wrapper">
