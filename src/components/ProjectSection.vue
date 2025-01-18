@@ -1,6 +1,6 @@
 <template>
   <section class="flex flex-col items-center">
-    <h1 class="text-center text-2xl">My Projects</h1>
+    <h1 class="text-center text-2xl p-10">My Projects</h1>
     <div class="lg:w-3/4 flex flex-col space-y-10 mx-6">
       <TheCarousel 
         :items="projects"
