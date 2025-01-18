@@ -6,7 +6,7 @@
           <i class="fas fa-chevron-left"></i>
         </button>
     
-        <div class="carousel-content">
+        <div class="sm:mx-10">
           <slot :currentItem="items[currentIndex]"></slot>
         </div>
     
@@ -94,9 +94,9 @@ export default {
   margin: 0 auto;
 }
 
-.carousel-content {
+/*.carousel-content {
   margin: 0 3rem;
-}
+}*/
 
 .nav-button {
   position: absolute;
