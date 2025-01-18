@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app" @touchstart="clearActiveStates">
     <router-view v-slot="{ Component }">
       <TheHeader />
       <transition name="fade" mode="out-in">
@@ -17,6 +17,14 @@ export default {
   components: {
     TheHeader,
   },
+  methods: {
+    clearActiveStates() {
+      // Remove focus from any active elements
+      if (document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();
+      }
+    }
+  }
 };
 </script>
 
@@ -79,6 +87,19 @@ a {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+/* Global style to remove mobile tap highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Optional: If you want to maintain desktop hover states but remove mobile ones */
+@media (max-width: 768px) {
+  button:focus, 
+  a:focus {
+    outline: none !important;
+  }
 }
 
 @media (max-width: 575px) {
